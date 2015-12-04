@@ -29,14 +29,14 @@ var Joke  = React.createClass ({
     
   render: function() {
     var text = this.state.liked ? 'Hide Jokes' : 'Show Jokes';
-    console.log(text);
     return (
      
       <div>
-        <button id="showJoke" onClick= {this.loadJokesFromServer}
-                type="button" className="btn btn-default">{text}</button>
+        <div className="ball"  onClick= {this.loadJokesFromServer}
+                type="button">
            
         <MainJoke joke={this.state.joke} jokeDisplay={this.state.liked}/>
+        </div>
       </div>
     );
   }
@@ -49,7 +49,7 @@ var MainJoke = React.createClass({
 
     return !this.props.jokeDisplay ? <div/> : (
       <div className="col-sm-12"id="mainJoke">
-        <h3 className="returnTitles">That is so Fucking Funny Guy!</h3>
+        <h3 className="returnTitles"></h3>
           {jokeList}
       </div>
     );

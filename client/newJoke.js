@@ -33,11 +33,9 @@ var App = React.createClass({
 				<div>
 					<form method="POST">
 						<h1 id="formHead">Make your own Magic Ballz</h1>
-    					
-						
-						<input type="text" ref="cat" className="form-control" placeholder="Category Please"/>
-						<textarea type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire"/>
-						<button onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+						<input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Category Please"/>
+						<textarea id="jokeForm"type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire"/>
+						<button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
 					</form>
 				</div>
         );
