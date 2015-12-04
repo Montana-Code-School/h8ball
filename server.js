@@ -16,7 +16,9 @@ morgan          = require('morgan'),
 cookieParser    = require('cookie-parser'),
 db              = require('./model/db'),
 Joke            = require('./model/joke'),
-jokeRoutes      = require('./routes/jokeRoutes');
+Cat             = require('./model/cat'),
+jokeRoutes      = require('./routes/jokeRoutes'),
+ballRoutes      = require('./routes/ballRoutes');
 
 
 
@@ -84,6 +86,8 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 // routes ======================================================================
 
+
+app.use('/api/ball',ballRoutes);
 app.use('/api/jokes',jokeRoutes);
 app.use('/api', router);
 
