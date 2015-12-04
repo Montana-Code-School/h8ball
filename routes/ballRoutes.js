@@ -3,14 +3,12 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
-
 router.use(bodyParser.urlencoded({ extended: true }))
 
 router.use(function(req, res, next) {
  console.log('At least something is happening');
  next();
 })
-
 
 router.route('/cat')
    .post(function(req, res){
@@ -39,7 +37,6 @@ router.route('/cats')
     }
   });
 })
-
 
 router.route('/cat/:cat_id')
 // GET JOKE BY ID
