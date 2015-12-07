@@ -1,5 +1,5 @@
 var React = require("react");
-
+var ListOfCats = require('./listOfCats');
 
 var Joke  = React.createClass ({
   getInitialState: function() {
@@ -8,7 +8,7 @@ var Joke  = React.createClass ({
 
     loadJokesFromServer: function() {
       var url = '/api/jokes/cat/justone/';
-      var url2 = '5665c3cdba0ce38808064ea9';
+      var url2 = '5665c3d5ba0ce38808064eaa';
 		$.ajax({
           url: url + url2,
           dataType: 'json',

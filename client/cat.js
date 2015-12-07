@@ -10,4 +10,4 @@ var Cats = React.createClass({
         );
     }
 });
-module.exports = Cats;
+// module.exports = Cats;

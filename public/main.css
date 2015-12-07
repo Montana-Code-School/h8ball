@@ -1,4 +1,7 @@
-
+a {
+    float: right;
+    color: red;
+}
 .ball {
  color: tomato;
  text-align: center;
