@@ -1,6 +1,6 @@
 var React = require("react");
 var ListOfCats = require('./listOfCats');
-var Cats = require('./cat');
+
 
 var AllCats = React.createClass({
 

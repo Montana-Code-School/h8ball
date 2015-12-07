@@ -1,8 +1,6 @@
 *{
     font-family: 'Bangers', cursive;
 }
-
-
 .ball {
  background: black;
  color: tomato;
@@ -15,11 +13,9 @@
  text-align: center;
  background: radial-gradient(circle at 100px 100px, gray, black);
 }
-
 #newJokes{
     text-align: center;
 }
-
 #jokeOptions{
     margin-top: 100px;
     text-align: center;
@@ -36,9 +32,7 @@
     text-align: center;
     font-family: 'Bangers', cursive;
     font-size: 24px;
-
 }
-
 .catBalls:hover{
     background-color: lightgrey;
     opacity: 0.7;
@@ -68,9 +62,7 @@
     height: 43.750em;
     width: 43.750em;
 }
-
 @-webkit-keyframes shake {
-
     0% { -webkit-transform: translate(2px, 19px) rotate(0deg); }
     10% { -webkit-transfrom: translate(-109px, -90px) rotate(-3deg); }
     20% { -webkit-transform: translate(-100px, 0px) rotate(2deg); }
@@ -82,8 +74,6 @@
     80% { -webkit-transform: translate(-100px, -59px) rotate(1deg); }
     90% { -webkit-transform: translate(100px, 100px) rotate(0deg); }
     100% { -webkit-transform: translate(101px, -125px) rotate(-1); }
-
-
 }
 .shake:hover,
 .shake:focus{
@@ -106,7 +96,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
 .jumbotron{
     background: url("img/catFlyingInSpace.png");
     background-repeat: no-repeat;
@@ -117,9 +106,6 @@
     padding: 0;
    /* width: 100%;*/
 }
-
-
-
 .navbar, .navbar-default, .navbar-collapse, .nav, .navbar-brand {
     background-color: white;
     font-family: 'Bangers', cursive;
@@ -128,9 +114,12 @@
 #nav{
     margin-bottom: 0;
 }
-
 #magic8Ball{
     color: white;
     font-family: 'Bangers', cursive;
-
+}
+#profiles{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
