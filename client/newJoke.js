@@ -11,7 +11,7 @@ var App = React.createClass({
 				return;
 			}
 			var data = ({ cat: cat, joke: joke});
-			var url2 = '5665c3d5ba0ce38808064eaa' 
+			var url2 = '5665ba73862c80750d20ee7f' 
 			$.ajax({
 				url:'/api/jokes/cat/' + url2,
 				dataType: 'json',

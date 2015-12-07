@@ -34,10 +34,7 @@ var AllCats = React.createClass({
     render: function() {
      return (
         <div>
-        <ListOfCats data={this.state.data} />
-        
-          
-          
+        <ListOfCats data={this.state.data} />          
         </div>
         );
     }

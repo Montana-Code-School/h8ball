@@ -1,5 +1,5 @@
 var React = require("react");
-// var Cats = require('./cat');
+//var Cats = require('./cat');
 
 var ListOfCats = React.createClass({
 	alertt: function(c){
@@ -10,7 +10,9 @@ var ListOfCats = React.createClass({
     		console.log(c.name)
         	return (
         		<div>
-        			<li><button onClick={this.alertt.bind(this,c._id)}>{c.name}</button></l1>
+                    
+        			<li><button onClick={this.alertt.bind(this,c._id)}>{c.name}</button></li>
+
         		</div>
         		)
       		})

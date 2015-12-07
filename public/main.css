@@ -1,21 +1,25 @@
-a {
-    float: right;
-    color: red;
+*{
+    font-family: 'Bangers', cursive;
 }
+
+
 .ball {
+ background: black;
  color: tomato;
- text-align: center;
+ text-align:center;
  padding-top: 30%;
  font-size:2.3em;
  border-radius: 50%;
  height: 500px;
  width: 500px;
+ text-align: center;
  background: radial-gradient(circle at 100px 100px, gray, black);
- margin: 25px auto auto auto;
 }
+
 #newJokes{
     text-align: center;
 }
+
 #jokeOptions{
     margin-top: 100px;
     text-align: center;
@@ -32,13 +36,15 @@ a {
     text-align: center;
     font-family: 'Bangers', cursive;
     font-size: 24px;
+
 }
+
 .catBalls:hover{
     background-color: lightgrey;
     opacity: 0.7;
 }
 #jokeForm{
-    height: 150px;
+    height: 300px;
     background-color: transparent;
     color: tomato;
     font-size: 1.9em;
@@ -46,7 +52,6 @@ a {
 #catFrom{
     background-color: transparent;
     font-size: 1.2em;
-    color: tomato;
 }
 #makeBallButton{
     background: green;
@@ -56,19 +61,29 @@ a {
     text-align:left;
     margin-top: 25px;
 }
+#ballWell{
+    margin-left: 4em; 
+    margin-top: 3.125em;
+    opacity: 0.75;
+    height: 43.750em;
+    width: 43.750em;
+}
 
 @-webkit-keyframes shake {
+
     0% { -webkit-transform: translate(2px, 19px) rotate(0deg); }
-    10% { -webkit-transfrom: translate(-51px, -90px) rotate(-3deg); }
-    20% { -webkit-transform: translate(-51px, 0px) rotate(2deg); }
-    30% { -webkit-transform: translate(0px, 51px) rotate(0deg); }
-    40% { -webkit-transform: translate(51px, -51px) rotate(1deg); }
-    50% { -webkit-transform: translate(-51px, 20px) rotate(-5deg); }
-    60% { -webkit-transform: translate(-58px, 51px) rotate(0deg); }
-    70% { -webkit-transform: translate( 51px, 51px) rotate(-4deg); }
-    80% { -webkit-transform: translate(-51px, -59px) rotate(1deg); }
-    90% { -webkit-transform: translate(51px, 51px) rotate(0deg); }
-    100% { -webkit-transform: translate(51px, -51px) rotate(-1); }
+    10% { -webkit-transfrom: translate(-109px, -90px) rotate(-3deg); }
+    20% { -webkit-transform: translate(-100px, 0px) rotate(2deg); }
+    30% { -webkit-transform: translate(0px, 100px) rotate(0deg); }
+    40% { -webkit-transform: translate(100px, -100px) rotate(1deg); }
+    50% { -webkit-transform: translate(-100px, 20px) rotate(-5deg); }
+    60% { -webkit-transform: translate(-58px, 100px) rotate(0deg); }
+    70% { -webkit-transform: translate( 100px, 100px) rotate(-4deg); }
+    80% { -webkit-transform: translate(-100px, -59px) rotate(1deg); }
+    90% { -webkit-transform: translate(100px, 100px) rotate(0deg); }
+    100% { -webkit-transform: translate(101px, -125px) rotate(-1); }
+
+
 }
 .shake:hover,
 .shake:focus{
@@ -79,15 +94,43 @@ a {
     -webkit-animation-timing-function: linear;
 }
 #idx-img{
-   width: 100%;
-background-size: cover;
-position: absolute;
-background-repeat: no-repeat;
-background-attachment: fixed;
+    width: 100%;
+    /*linear-gradient(
+    rgba(205, 181, 205, 0.5),
+    rgba(205, 181, 205, 0.5)
+    ),*/
+    background-size: cover;
+    position: absolute;
+    /*background-attachment: scroll;*/
+    /*background-position: 0 100%;*/
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
+.jumbotron{
+    background: url("img/catFlyingInSpace.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    margin: 0;
+    opacity: 0.7;
+    padding: 0;
+   /* width: 100%;*/
+}
+
+
+
 .navbar, .navbar-default, .navbar-collapse, .nav, .navbar-brand {
     background-color: white;
     font-family: 'Bangers', cursive;
     font-size: 32px;
-    color: black;
+}
+#nav{
+    margin-bottom: 0;
+}
+
+#magic8Ball{
+    color: white;
+    font-family: 'Bangers', cursive;
+
 }
