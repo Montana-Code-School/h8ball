@@ -1,7 +1,7 @@
 var React = require('react');
 var App = require('./newJoke');
 var Joke = require('./magic');
-var AllCats = require('./allCats')
+var AllCats = require('./allCats');
 
 
 React.render(<App/>, document.getElementById('newJokes'));

@@ -1,14 +1,4 @@
 
-#ballWell{
-    margin-left: 4em; 
-    margin-top: 3.125em;
-    background: rgba(225, 225, 225, .6);
-    height: 43.750em;
-    width: 43.750em;
-    border: none;
-    border-radius: 50%;
-
-}
 .ball {
  color: tomato;
  text-align: center;

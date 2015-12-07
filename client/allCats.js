@@ -34,7 +34,7 @@ var AllCats = React.createClass({
     render: function() {
      return (
         <div>
-        <ListOfCats data={this.props.data} />
+        <ListOfCats data={this.state.data} />
         
           
           
