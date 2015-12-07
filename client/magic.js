@@ -8,7 +8,7 @@ var Joke  = React.createClass ({
 
     loadJokesFromServer: function() {
       var url = '/api/jokes/cat/justone/';
-      var url2 = '5661c3ffe107044102dd9992';
+      var url2 = '';
 		$.ajax({
           url: url + url2,
           dataType: 'json',
