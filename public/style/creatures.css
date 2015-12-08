@@ -1,0 +1,246 @@
+*{
+    color: black;
+}
+.name{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 40px;
+}
+
+
+/* ***************** Start Creatures  */
+
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Amatic SC';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/IDnkRTPGcrSVo50UyYNK73hCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+
+/* Reset ================ */    
+* { box-sizing:border-box; }
+
+body {
+  text-align:center;
+  font:300 100%/1.5 'Amatic SC', cursive;
+  color:#494636;
+  background:#F8EEB9;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+h1 { font-size:2rem; }
+        
+a { cursor:pointer; text-decoration:none; color:#111; }
+
+    
+    
+    
+/* Creature container ========== */    
+.creatures { list-style:none; margin:15px 0; transition:opacity .3s; }
+    
+.creatures li {
+   display:inline-block;
+   vertical-align:top;
+   text-align:center;
+   width:260px;
+   list-style:none;
+   margin:0 auto;
+   padding:15px 30px;
+   user-select:none;
+}
+
+
+/* Header============================== */
+    hgroup { text-align:center; white-space:nowrap; }  
+    .logo, .make { position:relative; display:block; color:#494636; }
+    .logo { font-size:4rem; }
+    
+    .make { font-size:2rem; }
+
+/* Creature ================== */
+figure {
+  display:inline-block;
+        width:200px;
+        height:200px;
+        padding:40px;
+        box-shadow:inset -10px -30px rgba(0,0,0,.06);
+        -moz-border-radius:100px;
+        -webkit-border-radius:100px;
+        border-radius:50%;
+        animation:bobble 5s ease-in-out infinite;
+        transform-origin:center bottom;
+        transition:padding .3s, bottom .3s;
+        text-align:center;
+    }
+    @keyframes bobble { 33%{ transform:rotate(5deg); } 66%{ transform:rotate(-5deg); } }
+    
+    li:nth-child(5n+1) figure { animation-delay:-3s; background-color:tomato; }
+    li:nth-child(5n+2) figure { animation-delay:-1s; background-color:dodgerblue; }
+    li:nth-child(5n+3) figure { animation-delay:-4s; background-color:coral; }
+    li:nth-child(5n+4) figure { animation-delay:-.2.5s; background-color:limegreen; }   
+    
+    
+    li:hover figure { padding:30px 40px; }
+    li:hover .click-anim { transform:translateY(-6px); }
+    
+    
+   .click-anim { transition:.3s cubic-bezier(.15,.60,.30,1.9); transform-origin:center bottom; }
+        li:active .click-anim { transform:scale(1.1);  } 
+
+
+
+/* Captions ==================================================== */    
+    figcaption { padding:10px 0; font-size:12px; font-family:monospace; }
+
+    em { font-family:"Georgia", serif; }    
+    figcaption a { display:inline-block; color:#494636; border-bottom:1px solid transparent; white-space:nowrap; }
+    figcaption a:hover { text-decoration:underline; }
+        
+    time { display:block; }
+    time a { font-size:11px; }  
+    
+    
+    
+/* Shadow ======================================================= */
+    .shadow {
+        height:20px;
+        background:rgba(0,0,0,.1);
+        width:60%;
+        border-radius:100%;
+        margin:-15px 0 0 30%;
+        transition:.3s;
+    }
+    li:hover .shadow { background:rgba(0,0,0,.05); } 
+    li:active .shadow { background:rgba(0,0,0,.08); width:70%; }
+    
+    
+    
+/* Eyes ======================================================== */
+    .eye {
+        display:inline-block;
+        width:10px;
+        height:15px;
+        margin:0 5px 5px;
+        background:rgba(0,0,0,.9);
+        border-radius:10px;
+        border-radius:50%;
+        animation:blink 4s ease-in-out infinite;
+    }
+    @keyframes blink { 90% { transform:none; } 95% { transform:rotateX(90deg); } }
+    
+    
+    
+/* Moustache =================================================== */    
+    .moustache { display:inline-block; width:100%; height:10px; }
+    .moustache:before, .moustache:after { display:inline-block;  color:rgba(0,0,0,.9); content:"~"; font-size:4em; line-height:0; font:5em/20px "Helvetica", Arial; margin:0 -4px; }
+    .moustache:before { transform:rotateY(180deg); }
+    
+    li:hover .moustache { animation:moustache-wiggle 2s infinite; }
+    @keyframes moustache-wiggle { 50%,90%{ transform:none; } 60%,80%{ transform:rotate(-5deg); } 70%{ transform:rotate(5deg); } }
+    
+    
+    
+/* Mouth =================================================== */    
+    .mouth {
+        display:block;
+        width:100%;
+        height:20px;
+        margin:5px auto 0;
+        background:rgba(0,0,0,.9);
+        border-radius:10px 10px 100px 100px;
+        border-radius:10px 10px 50% 50%;
+        transition:border-radius .5s, height .5s cubic-bezier(.15,.60,.30,1.9);
+        overflow:hidden;
+        line-height:0;
+        transform-origin:center top; 
+    }
+
+    
+    .teeth:after,
+    .teeth:before,
+    .tooth:after {
+        display:inline-block;
+        content:"";
+        margin:0 2px;
+        width:15px;
+        height:15px;
+        background:#eee;
+    }
+    li:nth-child(odd) .tooth:after { margin-right:17px; }
+    li:nth-child(even) .tooth:after { margin-left:17px; }
+
+
+
+/* Behaviors =================================================== */  
+    .hungry .mouth { animation:hungry .5s infinite; border-radius:30px 30px 50% 50%; height:80px; }
+    .hungry .mouth:hover { cursor:none; }
+        @keyframes hungry { 40%{ height:40px; } }
+    
+    .nervous .mouth { animation:nervous .2s infinite; border-radius:40% 40% 5px 5px; }
+        @keyframes nervous { 50%{ height:24px; } }
+    
+    .hyper { animation:hyper 2s infinite; }
+        @keyframes hyper {
+            25%{ transform:translateY(-10px); }
+            15%,50%{ transform:rotateX(20deg); }
+            75%{ transform:none; }
+        }
+        .hyper .mouth { height:80px; border-radius:20px 20px 50% 50%; }
+
+
+    
+    
+/* Mobile-first Responsive======================================= */    
+    @media screen and (min-width:560px){
+        header section, section { width:550px; }
+        header section { font-size:1.2em; text-align:left; padding:30px 15px; }
+    }
+
+    @media screen and (min-width:820px){
+        header section, section { width:840px; }
+        
+        header h1 { font-size:1.7em; padding:0 30px; }
+        header ul { padding:0 30px; }
+        
+        hgroup { text-align:left; line-height:7rem; overflow:hidden;  } 
+        
+
+        .creatures { animation:enter .7s .2s both; transform-origin:center top; }
+            @keyframes enter { 0%{ transform:translateY(50px) scale(.8); opacity:0; } 100%{ transform:none; } }
+        .creatures li { padding:30px; }
+        
+        .logo, .make, .tweet { display:inline-block; }
+        .make { padding:0 30px; margin-right:45px; } 
+        .logo { padding:0 15px 0 45px; }
+            .logo span, .make span { border-bottom:2px solid transparent; }
+            .logo:hover span { border-color:#494636; }
+            
+        .make { float:right; border-radius:0 0 30px 30px; background:#3B382B; color:#F8EEB9; font-weight:700;
+                 box-shadow:-15px -30px #3B382B, 15px -30px #3B382B; transition:.3s; }
+            .make:hover span { border-color:#F8EEB9; }
+            .make:hover, .opened { background:#29271E; box-shadow:-15px -30px #29271E, 15px -30px #29271E; }
+            
+        .make:before, .make:after { position:absolute; top:0; display:block; content:""; }    
+        .make:before, .make:after { width:30px; height:100%; background:#F8EEB9 }
+        .make:before { left:-30px; border-radius:0 15px 0 0; }
+        .make:after { right:-30px; border-radius:15px 0 0; }
+        
+        time { display:block; transition:.2s; transition-delay:.2s; opacity:0; }
+        li:hover time, li:nth-child(-n+2) time { opacity:1; }
+    }
+
+
+    @media screen and (min-width:1070px){
+        header section, section { width:1070px; } 
+        header ul { width:760px; }
+            .creatures li { padding:30px; }
+            .creatures li:nth-child(3n){ padding:60px 30px 0; }
+            .creatures li:nth-child(3n+1){ padding:60px 30px 0px; }
+            .creatures li:nth-child(3n+2){ padding:60px 30px 0px;  }
+    }
