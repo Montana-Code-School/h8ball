@@ -61,7 +61,7 @@ var ListOfCats = React.createClass({
         	return (
         		<div>
                     
-        			<li><button onClick={self.alertt.bind(this,c._id)}> {c.name}</button></li>
+        			<h1><button onClick={self.alertt.bind(this,c._id)}> {c.name}</button></h1>
                     
         		</div>
         		)
