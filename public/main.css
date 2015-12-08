@@ -123,16 +123,14 @@
 
 
 
-html, body, svg { height: 100%; width: 100%; margin: 0; }
-
 .svg-snowglobe .snow { 
   fill: #000; 
   fill-opacity: 0;
 }
 
-.svg-snowglobe .base { fill: hsl(145, 63%, 22%); }
-.svg-snowglobe .globe { fill: hsl(214, 57%, 85%); }
-.svg-snowglobe .water { fill: hsl(216, 45%, 51%); }
+.svg-snowglobe .base { fill: brown }
+.svg-snowglobe .globe { fill: hsl(150, 57%, 85%); }
+.svg-snowglobe .water { fill: darkblue }
 
 .svg-snowglobe .snow { 
   -webkit-animation-name: snowfall;
