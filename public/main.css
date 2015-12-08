@@ -125,3 +125,11 @@
     margin-right: auto;
     width: 100%;
 }
+
+#background{
+    background-color: #fefdfb;
+}
+
+.name{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
