@@ -52,6 +52,7 @@ a { cursor:pointer; text-decoration:none; color:#111; }
    list-style:none;
    margin:0 auto;
    padding:15px 30px;
+   margin: 50px;
    user-select:none;
 }
 
