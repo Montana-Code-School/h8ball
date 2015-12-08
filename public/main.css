@@ -116,3 +116,89 @@
 .name{
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
+
+
+/**********************************Davids Snow Globe*************************************************/
+
+
+
+
+html, body, svg { height: 100%; width: 100%; margin: 0; }
+
+.svg-snowglobe .snow { 
+  fill: #000; 
+  fill-opacity: 0;
+}
+
+.svg-snowglobe .base { fill: hsl(145, 63%, 22%); }
+.svg-snowglobe .globe { fill: hsl(214, 57%, 85%); }
+.svg-snowglobe .water { fill: hsl(216, 45%, 51%); }
+
+.svg-snowglobe .snow { 
+  -webkit-animation-name: snowfall;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in;
+  
+  animation-name: snowfall;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  
+}
+
+.svg-snowglobe .snow:nth-child(1) { 
+  -webkit-animation-delay: 2s; 
+  animation-delay: 2s; 
+}
+.svg-snowglobe .snow:nth-child(2) { 
+  -webkit-animation-delay: 4s; 
+  animation-delay: 4s; 
+  
+}
+.svg-snowglobe .snow:nth-child(3) { 
+  -webkit-animation-delay: 6s; 
+  animation-delay: 6s; 
+}
+.svg-snowglobe .snow:nth-child(4) { 
+  -webkit-animation-delay: 8s; 
+  animation-delay: 8s; 
+}
+.svg-snowglobe .snow:nth-child(5) { 
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+}
+.svg-snowglobe .snow:nth-child(6) { 
+  -webkit-animation-delay: 12s;
+  animation-delay: 12s;
+}
+.svg-snowglobe .snow:nth-child(7) { 
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
+}
+.svg-snowglobe .snow:nth-child(8) { 
+  -webkit-animation-delay: 16s; 
+  animation-delay: 16s; 
+}
+.svg-snowglobe .snow:nth-child(9) { 
+  -webkit-animation-delay: 18s;
+  animation-delay: 18s;
+}
+.svg-snowglobe .snow:nth-child(10) { 
+  -webkit-animation-delay: 20s;
+  animation-delay: 20s;
+}
+
+@-webkit-keyframes snowfall { 
+  0% { fill-opacity: 0; }
+  25% { fill-opacity: 1; }
+  50% { -webkit-transform: translateY(25px); fill-opacity: 0; }
+  100% { fill-opacity: 0 }
+}
+
+@keyframes snowfall { 
+  0% { fill-opacity: 0; }
+  25% { fill-opacity: 1; }
+  50% { transform: translateY(25px); fill-opacity: 0; }
+  100% { fill-opacity: 0 }
+}
