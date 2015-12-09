@@ -2,21 +2,25 @@
 .ball {
  background-image: url("img/8ball.png");
  color: tomato;
- text-align: center;
- padding-top: 30%;
+ /*text-align: center;*/
+ padding-top: 40%;
  font-size:2.3em;
- border-radius: 50%;
- height: 500px;
- width: 500px;
+/* border-radius: 50%;*/
+ height: 100%;
+ width: 100%;
  margin-top: 10px;
  margin-right: 100px;
+ background-repeat: no-repeat;
+ position: relative;
+ left: 20%;
 }
 
-.8Ball {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
+
+.row{
+    height: 1000px;
+    width: 1000px;
 }
+
 
 
 .heading{
@@ -75,8 +79,6 @@
     height: 100%;
     background-size: cover;
     position: fixed;
-    /*background-attachment: scroll;*/
-    /*background-position: 0 100%;*/
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -93,10 +95,11 @@
 .navbar, .navbar-default, .navbar-collapse, .nav, .navbar-brand {
     background-color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 32px;
+    font-size: 24px;
 }
 #nav{
     margin-bottom: 0;
+
 }
 #magic8Ball{
     color: white;

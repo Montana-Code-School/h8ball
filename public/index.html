@@ -10,6 +10,7 @@
 	<img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes">
 
 <span id="app"></span>
+
 	
 	
 	
@@ -20,5 +21,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 <script src="./static/home.js"></script>
+<script type="text/javascript">
+
+jQuery.fn.shake = function() {
+   this.each(function(i) {
+       $(this).css({ "position" : "relative" });
+       for (var x = 1; x <= 3; x++) {
+           $(this).animate({ left: 250 }, 10).animate({ left: 250}, 5).animate({ left: 250 }, 10).animate({ left: 200 }, 15).animate({ top: -50 }, 10).animate({ top: 50}, 15).animate({topt: 25 }, 10).animate({ top: 20 }, 15);
+
+       }
+   });
+   return this;
+}
+
+$(".ball").click(function() {
+   $(this).shake();
+});
+    
+
+</script>
 </body>
 </html>

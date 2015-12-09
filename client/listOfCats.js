@@ -2,7 +2,7 @@
 var React = require("react");
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '5665c3cdba0ce38808064ea9', jokeData:[], allCats: [], liked: false}
+        return { catId: '566748a010879dab25ba6064', jokeData:[], allCats: [], liked: false}
     },
     loadCatsFromServer: function() {
     var url = "/api/ball/cats";
@@ -27,6 +27,7 @@ var App = React.createClass({
     });
     
   },
+
     loadJokesFromServer: function(id) {
     console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
@@ -65,28 +66,31 @@ var App = React.createClass({
                   <a className="navbar-brand" href="/">MAGIC 8 BALL</a>
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
-                    <ul className="nav navbar-nav">
-                        <li> <a href="about.html">About</a></li>
+                    <ul className="nav navbar-nav navbar-right">
+                        
                         <li className="dropdown">
-                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pre-made Balls<span className="caret"></span></a>
+                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRE-MADE<span className="caret"></span></a>
                           <ul className="dropdown-menu">
                             <AllCategories loadNewCats={this.loadNewCats} data={this.state.allCats} />
                           </ul>
                         </li>
                          <li className="dropdown">
-                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Make Your Own<span className="caret"></span></a>
+                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
                           <ul className="dropdown-menu">
                             <NewBall loadNewCats={this.loadNewCats} data={this.state.allCats} />
 
                           </ul>
                         </li>
+                        <li> <a href="about.html">ABOUT</a></li>
                     </ul>
                 </div>
               </div>
             </nav>
             <div className="row">
-                <div onClick={this.loadJokesFromServer} className="ball shake col-lg-5 col-lg-offset-2 col-sm-4 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+                <div onClick={this.loadJokesFromServer} className="ball col-md-12">
+                   <div id="jokeDiv"> 
                     <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+                   </div>
                 </div>
             </div>
         </div>
