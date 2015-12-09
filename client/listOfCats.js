@@ -182,7 +182,6 @@ var NewBall = React.createClass({
     render: function() {
         return (
                 <div>
-                
                     <form method="POST">
                         <h1 id="formHead">Make your own Magic Ballz</h1>
                         <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Category Please"/>
