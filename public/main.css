@@ -2,13 +2,12 @@
 .ball {
  background-image: url("img/8ball.png");
  color: tomato;
- text-align:center;
+ text-align: center;
  padding-top: 30%;
  font-size:2.3em;
- border-radius: 1%;
+ border-radius: 50%;
  height: 500px;
  width: 500px;
- /*background: radial-gradient(circle at 100px 100px, gray, black);*/
  margin-top: 10px;
  margin-right: 100px;
 }
@@ -16,12 +15,9 @@
 .8Ball {
   height: 100%;
   width: 100%;
+  border-radius: 50%;
 }
 
-#newJokes{
-    text-align: center;
-
-}
 
 .heading{
   color:black;
