@@ -70,7 +70,7 @@ var App = React.createClass({
                          <li className="dropdown">
                           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
                           <ul className="dropdown-menu" id="makeYourOwn">
-                            <NewBall loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                            <NewBall data={this.state.allCats} />
 
                           </ul>
                         </li>
@@ -78,9 +78,9 @@ var App = React.createClass({
                           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOG IN<span className="caret"></span></a>
                           <ul className="dropdown-menu" id="logIn">
                             
-                            <li> <a href="/login">login</a></li>
-                            <li> <a href="/profile">Profile</a></li>
-                            <li> <a href="/signup">Signup</a></li>
+                            <li> <a href="/login">LOGIN</a></li>
+                            <li> <a href="/profile">PROFILE</a></li>
+                            <li> <a href="/signup">SIGNUP</a></li>
 
                           </ul>
                         </li>
@@ -145,14 +145,12 @@ var NewBall = React.createClass({
 
             var cat = React.findDOMNode(this.refs.cat).value.trim();
             var joke = React.findDOMNode(this.refs.joke).value.trim();
-             var catId = this.state.catId;
             if(!cat){
                 return;
             }
-            var data = ({ cat: cat, joke: joke});
-            var url2 = catId; 
+            var data = ({ cat: cat, joke: joke}); 
             $.ajax({
-                url:'/api/jokes/cat/' + url2,
+                url:'/api/jokes/cat',
                 dataType: 'json',
                 data: data,
                 type: 'POST',
