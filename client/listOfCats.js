@@ -2,7 +2,7 @@
 var React = require("react");
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '566748a010879dab25ba6064', jokeData:[], allCats: [], liked: false}
+        return { catId: '', jokeData:[], allCats: [], liked: false}
     },
     loadCatsFromServer: function() {
     var url = "/api/ball/cats";
@@ -63,21 +63,24 @@ var App = React.createClass({
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <a className="navbar-brand" href="/">MAGIC 8 BALL</a>
+                  <a className="navbar-brand" id="brand" href="/">MAGIC 8 BALL</a>
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul className="nav navbar-nav navbar-right">
-                        
-                        <li className="dropdown">
-                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">PRE-MADE<span className="caret"></span></a>
-                          <ul className="dropdown-menu">
-                            <AllCategories loadNewCats={this.loadNewCats} data={this.state.allCats} />
-                          </ul>
-                        </li>
                          <li className="dropdown">
                           <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
-                          <ul className="dropdown-menu">
+                          <ul className="dropdown-menu" id="makeYourOwn">
                             <NewBall loadNewCats={this.loadNewCats} data={this.state.allCats} />
+
+                          </ul>
+                        </li>
+                        <li className="dropdown">
+                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOG IN<span className="caret"></span></a>
+                          <ul className="dropdown-menu" id="logIn">
+                            
+                            <li> <a href="/login">login</a></li>
+                            <li> <a href="/profile">Profile</a></li>
+                            <li> <a href="/signup">Signup</a></li>
 
                           </ul>
                         </li>
@@ -86,6 +89,16 @@ var App = React.createClass({
                 </div>
               </div>
             </nav>
+
+            <div>
+              <li className="dropdown">
+                <h2 className="dropdown-toggle" id="dropDown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SELECT YOUR CATEGORY<span className="caret"></span></h2>
+                  <ul className="dropdown-menu" id="preMade">
+                    <AllCategories loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                  </ul>
+              </li>
+            </div>
+
             <div className="row">
                 <div onClick={this.loadJokesFromServer} className="ball col-md-12">
                    <div id="jokeDiv"> 
@@ -102,7 +115,7 @@ var AllCategories = React.createClass({
         var self = this;
         var cat = this.props.data.map(function(c){
             return (
-                <li> <button onClick={self.props.loadNewCats.bind(this, c._id)}>{c.name}</button> </li>
+                <h2> <button onClick={self.props.loadNewCats.bind(this, c._id)}>{c.name}</button> </h2>
                 ) 
     })
         return (

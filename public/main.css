@@ -92,11 +92,42 @@
     padding: 0;
    /* width: 100%;*/
 }
-.navbar, .navbar-default, .navbar-collapse, .nav, .navbar-brand {
+.navbar, .navbar-default, .navbar-collapse, .nav {
     background-color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 24px;
 }
+
+#brand {
+    background-color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 32px;
+}
+
+#makeYourOwn{
+    width: 500px;
+}
+
+#preMade{
+    background: transparent;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-left: 50px;
+    
+}
+#preMade button {
+    color: black;
+    
+}
+#dropDown{
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    margin-left:50px;
+    margin-top: 50px;
+    /*border: 1px solid white;*/
+    width: 250px;
+}
+
+
 #nav{
     margin-bottom: 0;
 
