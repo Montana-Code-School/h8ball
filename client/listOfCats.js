@@ -148,21 +148,35 @@ var NewBall = React.createClass({
             if(!cat){
                 return;
             }
-            var data = ({ cat: cat, joke: joke}); 
+            var data = ({ name: cat }); 
             $.ajax({
-                url:'/api/jokes/cat',
+                url:'/api/ball/cat',
                 dataType: 'json',
                 data: data,
                 type: 'POST',
                     success:function(response){
-                    console.log("Posting data", data, response)
-                    document.location='/index.html'
+                    var data = ({ joke: joke});
+                    var id = response._id;
+                    console.log(id);
+                    $.ajax({
+                      url:'/api/jokes/cat/' + id,
+                      dataType:'json',
+                      data: data,
+                      type: 'POST',
+                        success:function(data){
+                          console.log(data);
+                          document.location = 'index.html'
+                        }.bind(this),
+                        error: function(err){
+                          console.log(err);
+                        }.bind(this)
+                    })
                     }.bind(this),
                     error: function(xhr,status, err){
                         console.log("NOT POSTING DATA")
                         console.log(data)
                         console.error(this.props.url, status, err.toString());
-                    }.bind(this)
+                    }.bind(this) 
             })
     },
     render: function() {
@@ -179,6 +193,21 @@ var NewBall = React.createClass({
         );
     }
 });
+
+
+var JokeWithCat = React.createClass({
+    render: function() {
+        return (
+        <div>
+          <h1>Hello</h1>
+          
+        </div>
+        );
+    }
+});
+
+
+
 
 module.exports = App;
 
