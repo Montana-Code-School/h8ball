@@ -54,6 +54,7 @@ var App = React.createClass({
     render: function() {
         return (
         <div>
+          <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
             <nav className="navbar navbar-default" role="navigation">
               <div className="container-fluid">
                 <div className="navbar-header">
@@ -66,30 +67,26 @@ var App = React.createClass({
                   <a className="navbar-brand" id="brand" href="/">MAGIC 8 BALL</a>
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
-                    <ul className="nav navbar-nav navbar-right">
-                         <li className="dropdown">
-                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
-                          <ul className="dropdown-menu" id="makeYourOwn">
-                            <NewBall data={this.state.allCats} />
-
-                          </ul>
-                        </li>
-                        <li className="dropdown">
-                          <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOG IN<span className="caret"></span></a>
-                          <ul className="dropdown-menu" id="logIn">
-                            
-                            <li> <a href="/login">LOGIN</a></li>
-                            <li> <a href="/profile">PROFILE</a></li>
-                            <li> <a href="/signup">SIGNUP</a></li>
-
-                          </ul>
-                        </li>
-                        <li> <a href="about.html">ABOUT</a></li>
-                    </ul>
+                  <ul className="nav navbar-nav navbar-right">
+                    <li className="dropdown">
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
+                        <ul className="dropdown-menu" id="makeYourOwn">
+                          <NewBall data={this.state.allCats} />
+                        </ul>
+                    </li>
+                    <li className="dropdown">
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOG IN<span className="caret"></span></a>
+                        <ul className="dropdown-menu" id="logIn">
+                          <li> <a href="/login">LOGIN</a></li>
+                          <li> <a href="/profile">PROFILE</a></li>
+                          <li> <a href="/signup">SIGNUP</a></li>
+                        </ul>
+                    </li>
+                    <li> <a href="about.html">ABOUT</a></li>
+                  </ul>
                 </div>
               </div>
             </nav>
-
             <div>
               <li className="dropdown">
                 <h2 className="dropdown-toggle" id="dropDown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SELECT YOUR CATEGORY<span className="caret"></span></h2>
@@ -98,13 +95,8 @@ var App = React.createClass({
                   </ul>
               </li>
             </div>
-
-            <div className="row">
-                <div onClick={this.loadJokesFromServer} className="ball col-md-12">
-                   <div id="jokeDiv"> 
-                    <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
-                   </div>
-                </div>
+            <div className="ball col-md-10 row" onClick={this.loadJokesFromServer}>
+              <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
             </div>
         </div>
         );
@@ -132,8 +124,8 @@ var OneJoke = React.createClass({
             {joke}
                 
     return (
-        <div>
-            {j}
+        <div id="one-joke">
+            <p className="arrow-down">{j}</p>
         </div>
             )
     }

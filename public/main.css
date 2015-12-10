@@ -1,19 +1,44 @@
 
+
 .ball {
  background-image: url("img/8ball.png");
- color: tomato;
- /*text-align: center;*/
+ color: #551A8B;
+ text-align: center;
  padding-top: 40%;
- font-size:2.3em;
-/* border-radius: 50%;*/
+ font-size:1.3em;
  height: 100%;
  width: 100%;
  margin-top: 10px;
  margin-right: 100px;
  background-repeat: no-repeat;
- position: relative;
+ /*position: relative;*/
  left: 20%;
+ background-size: 50% 50%;
+ background-repeat: no-repeat;
 }
+#one-joke p {
+    position: absolute;
+    top: 40%;
+    left: 26%;
+    background: transparent;
+    width: 200px;
+    height: 100px;
+}
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    border-top: 2px solid #551A8B;
+}
+.arrow-down {
+    border-color: black transparent;
+    border-style: solid;
+    border-width: 20px 20px 0px 20px;
+    height: 0px;
+    width: 0px;
+}
+
 
 .row{
     height: 1000px;
