@@ -95,8 +95,9 @@ var App = React.createClass({
                   </ul>
               </li>
             </div>
-            <div className="ball col-md-10 row" onClick={this.loadJokesFromServer}>
-              <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+            <div className="col-md-10" onClick={this.loadJokesFromServer}>
+              <img className="ball" src="img/8ball.png" />
+                <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
             </div>
         </div>
         );
@@ -125,7 +126,7 @@ var OneJoke = React.createClass({
                 
     return (
         <div id="one-joke">
-            <p className="arrow-down">{j}</p>
+            <p>{j}</p>
         </div>
             )
     }

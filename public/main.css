@@ -1,43 +1,24 @@
-
+/*
 
 .ball {
- background-image: url("img/8ball.png");
- color: #551A8B;
- text-align: center;
- padding-top: 40%;
- font-size:1.3em;
- height: 100%;
- width: 100%;
- margin-top: 10px;
- margin-right: 100px;
- background-repeat: no-repeat;
- /*position: relative;*/
- left: 20%;
- background-size: 50% 50%;
- background-repeat: no-repeat;
-}
-#one-joke p {
+    left: 200px;
+    top: 0px;
     position: absolute;
-    top: 40%;
-    left: 26%;
-    background: transparent;
-    width: 200px;
-    height: 100px;
+}*/
+
+.ball{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size:2em;
+    margin-left: 100px;
 }
-.arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-top: 2px solid #551A8B;
-}
-.arrow-down {
-    border-color: black transparent;
-    border-style: solid;
-    border-width: 20px 20px 0px 20px;
-    height: 0px;
-    width: 0px;
-}
+
+/*#one-joke p {
+
+}*/
 
 
 .row{
