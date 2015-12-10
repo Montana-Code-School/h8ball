@@ -1,6 +1,6 @@
-*{
+/**{
     color: black;
-}
+}*/
 .name{
     font-family: 'Yanone Kaffeesatz', sans-serif;
     font-size: 40px;
@@ -28,15 +28,15 @@
 body {
   text-align:center;
   font:300 100%/1.5 'Amatic SC', cursive;
-  color:#494636;
-  background:#F8EEB9;
+  /*color:#494636;
+  background:#F8EEB9;*/
   overflow-y:scroll;
   overflow-x:hidden;
 }
 
 h1 { font-size:2rem; }
         
-a { cursor:pointer; text-decoration:none; color:#111; }
+a { cursor:pointer; text-decoration:none; /*color:#111;*/ }
 
     
     
@@ -59,7 +59,7 @@ a { cursor:pointer; text-decoration:none; color:#111; }
 
 /* Header============================== */
     hgroup { text-align:center; white-space:nowrap; }  
-    .logo, .make { position:relative; display:block; color:#494636; }
+    .logo, .make { position:relative; display:block;/* color:#494636;*/ }
     .logo { font-size:4rem; }
     
     .make { font-size:2rem; }
@@ -100,7 +100,7 @@ figure {
     figcaption { padding:10px 0; font-size:12px; font-family:monospace; }
 
     em { font-family:"Georgia", serif; }    
-    figcaption a { display:inline-block; color:#494636; border-bottom:1px solid transparent; white-space:nowrap; }
+    figcaption a { display:inline-block; /*color:#494636*/; border-bottom:1px solid transparent; white-space:nowrap; }
     figcaption a:hover { text-decoration:underline; }
         
     time { display:block; }
