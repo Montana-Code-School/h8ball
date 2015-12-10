@@ -18,27 +18,12 @@
 }
 #one-joke p {
     position: absolute;
-    top: 40%;
-    left: 26%;
+    top: 30%;
+    left: 20%;
     background: transparent;
     width: 200px;
     height: 100px;
 }
-.arrow-down {
-    width: 0; 
-    height: 0; 
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
-    border-top: 2px solid #551A8B;
-}
-.arrow-down {
-    border-color: black transparent;
-    border-style: solid;
-    border-width: 20px 20px 0px 20px;
-    height: 0px;
-    width: 0px;
-}
-
 
 .row{
     height: 1000px;
