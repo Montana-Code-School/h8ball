@@ -1,4 +1,3 @@
-
 var React = require("react");
 var App = React.createClass({
     getInitialState: function(){
@@ -27,7 +26,6 @@ var App = React.createClass({
     });
     
   },
-
     loadJokesFromServer: function(id) {
     console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
@@ -64,7 +62,7 @@ var App = React.createClass({
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <a className="navbar-brand" id="brand" href="/">MAGIC 8 BALL</a>
+                  <a className="navbar-brand" className="rainbow" id="brand" href="/">MAGIC 8 BALL</a>
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-right">
@@ -95,12 +93,14 @@ var App = React.createClass({
                   </ul>
               </li>
             </div>
-            <div className="col-md-10" onClick={this.loadJokesFromServer}>
-              <div className="ball">
-                <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
-                <img src="img/8ball.png" />
-            </div>
-          </div>
+            // <div className="col-md-10" >
+              <div className="ball" onClick={this.loadJokesFromServer}>
+              <div id="words">
+                  <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+              </div>
+                <img className="image-responsive" id="8ball" src="img/8ball.png" />
+             </div>
+          // </div>
         </div>
         );
     }
@@ -133,13 +133,9 @@ var OneJoke = React.createClass({
             )
     }
 });
-
-
-
 var NewBall = React.createClass({
     handleSubmit: function(e) {
         e.preventDefault();
-
             var cat = React.findDOMNode(this.refs.cat).value.trim();
             var joke = React.findDOMNode(this.refs.joke).value.trim();
             console.log(joke)
@@ -149,7 +145,6 @@ var NewBall = React.createClass({
                 return;
             }
             var data = ({ name: cat });
-
             $.ajax({
                 url:'/api/ball/cat',
                 dataType: 'json',
@@ -184,17 +179,15 @@ var NewBall = React.createClass({
         return (
                 <div>
                     <form method="POST">
-                        <h1 id="formHead">Make your own Magic Ballz</h1>
+                        <h1 id="formHead" className="rainbow">Make your own Magic Ballz</h1>
                         <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Category Please"/>
-                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire Once"/>               
+                        <textarea id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire! Separate as many answers you want with a comma"></textarea>               
                         <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
         );
     }
 });
-
-
 var JokeWithCat = React.createClass({
     render: function() {
         return (
@@ -205,9 +198,4 @@ var JokeWithCat = React.createClass({
         );
     }
 });
-
-
-
-
 module.exports = App;
-
