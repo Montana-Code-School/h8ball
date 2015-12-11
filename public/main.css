@@ -12,6 +12,13 @@
 }
 
 #words{
+    position: absolute;
+    top: 60%;
+    right: 50%;
+}
+
+#8ball{
+    z-index: -1;
 }
 .row{
     height: 1000px;

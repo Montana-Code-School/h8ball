@@ -97,11 +97,11 @@ var App = React.createClass({
             </div>
             // <div className="col-md-10" >
               <div className="ball" onClick={this.loadJokesFromServer}>
-                <div id="words">
+              <div id="words">
                   <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
-                </div>
-                  <img src="img/8ball.png" />
-            </div>
+              </div>
+                <img className="image-responsive" id="8ball" src="img/8ball.png" />
+             </div>
           // </div>
         </div>
         );
