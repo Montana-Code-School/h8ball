@@ -140,17 +140,20 @@ var NewBall = React.createClass({
 
             var cat = React.findDOMNode(this.refs.cat).value.trim();
             var joke = React.findDOMNode(this.refs.joke).value.trim();
+            console.log(joke)
+            var jokeArr = joke.split(',');
             if(!cat){
                 return;
             }
-            var data = ({ name: cat }); 
+            var data = ({ name: cat });
+
             $.ajax({
                 url:'/api/ball/cat',
                 dataType: 'json',
                 data: data,
                 type: 'POST',
                     success:function(response){
-                    var data = ({ joke: joke});
+                    var data = ({ joke: jokeArr});
                     var id = response._id;
                     console.log(id);
                     $.ajax({
@@ -180,7 +183,7 @@ var NewBall = React.createClass({
                     <form method="POST">
                         <h1 id="formHead">Make your own Magic Ballz</h1>
                         <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Category Please"/>
-                        <textarea id="jokeForm"type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire"/>
+                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire Once"/>               
                         <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>

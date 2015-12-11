@@ -2,8 +2,8 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var JokeSchema = new Schema ({
-   joke: String,
-    cat: { type: mongoose.Schema.Types.ObjectId, ref: 'Cat' }
+   joke: Array,
+   cat: { type: mongoose.Schema.Types.ObjectId, ref: 'Cat' }
   
 });
 
