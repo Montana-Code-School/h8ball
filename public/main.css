@@ -1,4 +1,7 @@
 
+*{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
 .ball{
     display: flex;
     justify-content: center;
@@ -8,6 +11,8 @@
     font-size:2em;
 }
 
+#words{
+}
 .row{
     height: 1000px;
     width: 1000px;
