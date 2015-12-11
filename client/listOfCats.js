@@ -142,6 +142,7 @@ var NewBall = React.createClass({
             var joke = React.findDOMNode(this.refs.joke).value.trim();
             console.log(joke)
             var jokeArr = joke.split(',');
+  
             if(!cat){
                 return;
             }
