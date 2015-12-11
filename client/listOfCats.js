@@ -1,33 +1,32 @@
-var React = require("react");
+var React = require('react');
 var App = React.createClass({
-    getInitialState: function(){
-        return { catId: '', jokeData:[], allCats: [], liked: false}
-    },
-    loadCatsFromServer: function() {
-    var url = "/api/ball/cats";
-        $.ajax({
+  getInitialState: function() {
+    return { catId: '', jokeData: [], allCats: [], liked: false};
+  },
+  loadCatsFromServer: function() {
+      var url = '/api/ball/cats';
+  $.ajax({
           url: url,
           dataType: 'json',
-          cache:false,
-          success:function(data){
-            console.log("inside success" + JSON.stringify(data[0]))
-            this.setState({allCats:data});
+          cache: false,
+          success: function (data) {
+            console.log('inside success' + JSON.stringify(data[0]));
+            this.setState ({ allCats:data });
           }.bind(this),
-          error: function(xhr,status, err){
-            console.log("broken url is " + this.props.url)
-            console.error(this.props.url, status,err.toString());
+          error: function(xhr, status, err) {
+            console.log('broken url is' '' + this.props.url);
+            console.error(this.props.url, status, err.toString());
           }.bind(this)
         });
-  },
-  loadNewCats: function(id){
+    },
+  loadNewCats: function(id) {
     var id = id;
     return this.setState({
-        catId: id 
-    });
-    
+      catId: id 
+    });    
   },
     loadJokesFromServer: function(id) {
-    console.log("going to get a single joke from server with id")
+  console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
       var catId = this.state.catId;
         $.ajax({
