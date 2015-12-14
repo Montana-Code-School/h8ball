@@ -179,9 +179,9 @@ var NewBall = React.createClass({
         return (
                 <div>
                     <form method="POST">
-                        <h1 id="formHead">Make your own Magic Ballz</h1>
-                        <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Category Please"/>
-                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire Once"/>               
+                        <h1 id="formHead">Make your own Magic 8 Ball!</h1>
+                        <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
+                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your responses"/>               
                         <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>

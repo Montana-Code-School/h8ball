@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> cbac1515ee56c3cddde1006191acc3be249b675a
 *{
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
@@ -13,10 +10,7 @@
     text-align: center;
     font-size:2em;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> cbac1515ee56c3cddde1006191acc3be249b675a
 #words{
     position: absolute;
     top: 60%;
@@ -24,13 +18,11 @@
     color: white;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> cbac1515ee56c3cddde1006191acc3be249b675a
 #8ball{
     z-index: -1;
 }
+
 .row{
     height: 1000px;
     width: 1000px;

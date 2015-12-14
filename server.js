@@ -18,8 +18,10 @@ db              = require('./model/db'),
 user            = require('./model/user'),
 Joke            = require('./model/joke'),
 Cat             = require('./model/cat'),
+Bubble          = require('./model/catBubble'),
 jokeRoutes      = require('./routes/jokeRoutes'),
-ballRoutes      = require('./routes/ballRoutes');
+ballRoutes      = require('./routes/ballRoutes'),
+catBubbleRoutes = require('./routes/catBubbleRoutes');
 
 
 
@@ -97,6 +99,7 @@ require('./config/passport')(passport);
 
 app.use('/api/ball',ballRoutes);
 app.use('/api/jokes',jokeRoutes);
+app.use('/api/catBubble',catBubbleRoutes);
 app.use('/api', router);
 
 
