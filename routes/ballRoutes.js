@@ -61,5 +61,20 @@ router.route('/cat/:cat_id')
          res.json({ message: 'Deleted' });
      });
  });
+router.route('/search/:query')
+.get(function(req, res) {
+    mongoose.model('Cat')
+      .find({
+        '$text': {
+          '$search': req.params.query
+        }
+      })
+      .exec(function(err, cat) {
+        if (err)
+          res.send(err);
+
+        res.send(cat);
+      });
+  });
 
 module.exports = router;

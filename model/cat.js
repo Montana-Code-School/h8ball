@@ -6,5 +6,5 @@ var CatSchema = new Schema ({
    jokes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Joke' }]
   
 });
-
+CatSchema.index({name: 'text' }, function(error) {});
 module.exports = mongoose.model('Cat', CatSchema);

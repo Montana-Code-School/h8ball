@@ -3,8 +3,11 @@ var App = React.createClass({
     getInitialState: function(){
         return { catId: '', jokeData:[], allCats: [], bubbleData: [], liked: false}
     },
-    loadCatsFromServer: function() {
+    loadCatsFromServer: function(search) {
     var url = "/api/ball/cats";
+    if(search){
+      url = url + '/search/' + search
+    }
         $.ajax({
           url: url,
           dataType: 'json',
@@ -138,6 +141,8 @@ var AllCategories = React.createClass({
     })
         return (
             <div>
+                <input type="text" placeholder="search Categories" ref="search"/>
+                <button onClick={this.searchCats}>Search</button>
                 {cat}
             </div>
         );
