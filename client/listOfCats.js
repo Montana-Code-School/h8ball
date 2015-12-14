@@ -1,19 +1,20 @@
 var React = require("react");
+
 var App = React.createClass({
     getInitialState: function(){
         return { catId: '', jokeData:[], allCats: [], bubbleData: [], liked: false}
     },
     loadCatsFromServer: function(search) {
-    var url = "/api/ball/cats";
-    if(search){
-      url = url + '/search/' + search
-    }
+      var url = "/api/ball/cats";
+      if(search){
+        url = 'api/ball/search/' + search
+      }
         $.ajax({
           url: url,
           dataType: 'json',
           cache:false,
           success:function(data){
-            console.log("inside success" + JSON.stringify(data[0]))
+            console.log("inside success of loadCatsFromServer" + JSON.stringify(data[0]))
             this.setState({allCats:data});
           }.bind(this),
           error: function(xhr,status, err){
@@ -29,7 +30,7 @@ var App = React.createClass({
     });
     
   },
-    loadJokesFromServer: function(id) {
+  loadJokesFromServer: function(id) {
     console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
       var catId = this.state.catId;
@@ -67,6 +68,10 @@ var App = React.createClass({
           }.bind(this)
         });
     },
+    searchCats: function(){
+      var thisCat = document.getElementById('searching').value;
+      this.loadCatsFromServer(thisCat);
+    },
     componentDidMount: function(){
         this.loadCatsFromServer();
         this.loadJokesFromServer();
@@ -103,6 +108,8 @@ var App = React.createClass({
                         </ul>
                     </li>
                     <li> <a href="about.html">ABOUT</a></li>
+                    <li>
+                  </li>
                   </ul>
                 </div>
               </div>
@@ -111,7 +118,7 @@ var App = React.createClass({
               <li className="dropdown">
                 <h2 className="dropdown-toggle" id="dropDown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SELECT YOUR CATEGORY<span className="caret"></span></h2>
                   <ul className="dropdown-menu" id="preMade">
-                    <AllCategories loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                    <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
                   </ul>
               </li>
             </div>
@@ -131,9 +138,12 @@ var App = React.createClass({
         );
     }
 });
+
+
+
 var AllCategories = React.createClass({
     render: function() {
-        var self = this;
+        var self = this; 
         var cat = this.props.data.map(function(c){
             return (
                 <h2> <button onClick={self.props.loadNewCats.bind(this, c._id)}>{c.name}</button> </h2>
@@ -141,13 +151,16 @@ var AllCategories = React.createClass({
     })
         return (
             <div>
-                <input type="text" placeholder="search Categories" ref="search"/>
-                <button onClick={this.searchCats}>Search</button>
+                <input type="text" placeholder="search Categories" id="searching" ref="search"/>
+                <button onClick={self.props.searchCats}>Search</button>
                 {cat}
             </div>
         );
     }
 });
+
+window.hello = document.getElementById('searching');
+
 var OneJoke = React.createClass({
     render: function() {
         var joke = this.props.data;
