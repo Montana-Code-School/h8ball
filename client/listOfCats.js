@@ -1,32 +1,33 @@
-var React = require('react');
+var React = require("react");
 var App = React.createClass({
-  getInitialState: function() {
-    return { catId: '', jokeData: [], allCats: [], liked: false};
-  },
-  loadCatsFromServer: function() {
-      var url = '/api/ball/cats';
-  $.ajax({
+    getInitialState: function(){
+        return { catId: '', jokeData:[], allCats: [], liked: false}
+    },
+    loadCatsFromServer: function() {
+    var url = "/api/ball/cats";
+        $.ajax({
           url: url,
           dataType: 'json',
-          cache: false,
-          success: function (data) {
-            console.log('inside success' + JSON.stringify(data[0]));
-            this.setState ({ allCats:data });
+          cache:false,
+          success:function(data){
+            console.log("inside success" + JSON.stringify(data[0]))
+            this.setState({allCats:data});
           }.bind(this),
-          error: function(xhr, status, err) {
-            console.log('broken url is' '' + this.props.url);
-            console.error(this.props.url, status, err.toString());
+          error: function(xhr,status, err){
+            console.log("broken url is " + this.props.url)
+            console.error(this.props.url, status,err.toString());
           }.bind(this)
         });
-    },
-  loadNewCats: function(id) {
+  },
+  loadNewCats: function(id){
     var id = id;
     return this.setState({
-      catId: id 
-    });    
+        catId: id 
+    });
+    
   },
     loadJokesFromServer: function(id) {
-  console.log("going to get a single joke from server with id")
+    console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
       var catId = this.state.catId;
         $.ajax({
@@ -61,7 +62,7 @@ var App = React.createClass({
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <a className="navbar-brand" className="rainbow" id="brand" href="/">MAGIC 8 BALL</a>
+                  <a className="navbar-brand" id="brand" href="/">MAGIC 8 BALL</a>
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-right">
@@ -92,14 +93,14 @@ var App = React.createClass({
                   </ul>
               </li>
             </div>
-            // <div className="col-md-10" >
+              <div className="col-md-10" >
               <div className="ball" onClick={this.loadJokesFromServer}>
               <div id="words">
                   <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
               </div>
                 <img className="image-responsive" id="8ball" src="img/8ball.png" />
              </div>
-          // </div>
+            </div>
         </div>
         );
     }
@@ -132,12 +133,6 @@ var OneJoke = React.createClass({
             )
     }
 });
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cbac1515ee56c3cddde1006191acc3be249b675a
 var NewBall = React.createClass({
     handleSubmit: function(e) {
         e.preventDefault();
@@ -150,10 +145,6 @@ var NewBall = React.createClass({
                 return;
             }
             var data = ({ name: cat });
-<<<<<<< HEAD
-
-=======
->>>>>>> cbac1515ee56c3cddde1006191acc3be249b675a
             $.ajax({
                 url:'/api/ball/cat',
                 dataType: 'json',
@@ -188,13 +179,9 @@ var NewBall = React.createClass({
         return (
                 <div>
                     <form method="POST">
-                        <h1 id="formHead" className="rainbow">Make your own Magic Ballz</h1>
+                        <h1 id="formHead">Make your own Magic Ballz</h1>
                         <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Category Please"/>
-<<<<<<< HEAD
                         <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire Once"/>               
-=======
-                        <textarea id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Spit yo hot fire! Separate as many answers you want with a comma"></textarea>               
->>>>>>> cbac1515ee56c3cddde1006191acc3be249b675a
                         <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
                     </form>
                 </div>
