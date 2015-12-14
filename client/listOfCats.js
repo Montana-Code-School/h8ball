@@ -1,7 +1,7 @@
 var React = require("react");
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '', jokeData:[], allCats: [], liked: false}
+        return { catId: '', jokeData:[], allCats: [], bubbleData: [], liked: false}
     },
     loadCatsFromServer: function() {
     var url = "/api/ball/cats";
@@ -38,6 +38,25 @@ var App = React.createClass({
             console.log("joke success");
             this.setState({jokeData: data});
             this.setState({liked: !this.state.liked});
+            this.loadBubblesFromServer();
+          }.bind(this),
+          error: function(xhr, status, err){
+            console.log("broken ")
+            console.error(status, err.toString());
+          }.bind(this)
+        });
+    },
+
+      loadBubblesFromServer: function() {
+      console.log("going to get a single response for the cat bubble")
+         var url = '/api/catBubble/catBubble';
+          $.ajax({
+            url: url,
+            dataType: 'json',
+            cache: false,
+          success:function(data){
+            console.log("catsnark success");
+            this.setState({bubbleData: data});
           }.bind(this),
           error: function(xhr, status, err){
             console.log("broken ")
@@ -99,6 +118,10 @@ var App = React.createClass({
                   <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
               </div>
                 <img className="image-responsive" id="8ball" src="img/8ball.png" />
+             </div>
+
+             <div> 
+             <JokeWithCat data={this.state.bubbleData} />
              </div>
             </div>
         </div>
@@ -189,10 +212,11 @@ var NewBall = React.createClass({
     }
 });
 var JokeWithCat = React.createClass({
+
     render: function() {
         return (
         <div>
-          <h1>Hello</h1>
+          <i id="comment" className="fa fa-comment"><span id="catWords">{this.props.data}</span></i>
           
         </div>
         );

@@ -132,6 +132,14 @@
     margin-right: auto;
     width: 100%;
 }
+
+#comment{
+    font-size: 7.4em;
+    color:white;
+}
+#catWords{
+    color:black;
+}
 #background{
     background-color: #fefdfb;
 }
