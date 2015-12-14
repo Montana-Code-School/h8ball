@@ -112,16 +112,15 @@ var App = React.createClass({
                   </ul>
               </li>
             </div>
+              <div className="col-md-2 col-offset-md-8"> 
+                <JokeWithCat data={this.state.bubbleData} />
+              </div>
               <div className="col-md-10" >
               <div className="ball" onClick={this.loadJokesFromServer}>
               <div id="words">
                   <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
               </div>
                 <img className="image-responsive" id="8ball" src="img/8ball.png" />
-             </div>
-
-             <div> 
-             <JokeWithCat data={this.state.bubbleData} />
              </div>
             </div>
         </div>
@@ -216,7 +215,7 @@ var JokeWithCat = React.createClass({
     render: function() {
         return (
         <div>
-          <i id="comment" className="fa fa-comment"><span id="catWords">{this.props.data}</span></i>
+          <i id="comment" className="fa fa-comment fa-flip-horizontal"><span id="catWords">{this.props.data}</span></i>
           
         </div>
         );
