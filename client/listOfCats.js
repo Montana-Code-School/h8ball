@@ -1,20 +1,30 @@
 var React = require("react");
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '', jokeData:[], allCats: [], liked: false}
+        return { catId: '567079df8cb57f1b857e2155', jokeData:[], activeCat: [], allCats: [], liked: false}
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
       if(search){
         url = 'api/ball/search/' + search
       }
+      var self = this
         $.ajax({
           url: url,
           dataType: 'json',
           cache:false,
           success:function(data){
-            console.log("inside success of loadCatsFromServer" + JSON.stringify(data[0]))
+            console.log("inside success of loadCatsFromServer" + data)
+            data.forEach(function(item){
+              console.log("inside for each and", item._id.toString(), self.state.catId.toString())
+              if(item._id.toString() == self.state.catId.toString()){
+                console.log("inside if")
+                self.setState({activeCat: item.name});
+                console.log("I make STATE", self.state.activeCat)
+              }
+            })
             this.setState({allCats:data});
           }.bind(this),
           error: function(xhr,status, err){
@@ -41,6 +51,7 @@ var App = React.createClass({
           success:function(data){
             console.log("joke success");
             this.setState({jokeData: data});
+            console.log(this.state.jokeData, 'loaded joke data');
             this.setState({liked: !this.state.liked});
           }.bind(this),
           error: function(xhr, status, err){
@@ -50,15 +61,24 @@ var App = React.createClass({
         });
     },
 
+
+
     searchCats: function(){
       var thisCat = document.getElementById('searching').value;
       this.loadCatsFromServer(thisCat);
+      document.getElementById('showCats').className = "dropdown open";
+
     },
     componentDidMount: function(){
         this.loadCatsFromServer();
         this.loadJokesFromServer();
     },
     render: function() {
+      if(this.state.activeCat){
+        var name = this.state.activeCat
+      } else { 
+        var name = "NOTHING AT ALL"
+      }
         return (
         <div>
           <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
@@ -81,23 +101,26 @@ var App = React.createClass({
                           <NewBall data={this.state.allCats} />
                         </ul>
                     </li>
-                    
-                    <li> <a href="about.html">ABOUT</a></li>
+                    <li id="showCats" className="dropdown">
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></a>
+                        <ul className="dropdown-menu" id="preMade">
+                          <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                        </ul>
+                    </li>
+                    <li className="dropdown"> 
+                      <a href="about.html">ABOUT</a>
+                    </li>
                   </ul>
                 </div>
               </div>
             </nav>
 
-            <li className="dropdown">
-              <h2 id="catball"className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></h2>
-                <ul className="dropdown-menu" id="preMade">
-                  <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
-                </ul>
-            </li>
+           
              <div className="col-md-6 col-xs-6" >
                <div className="ball" onClick={this.loadJokesFromServer}>
                  <div id="words">
                    <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+                   <h3>{name}</h3>
                  </div>
                  <img className="resize" id="8ball" src="img/8ball.png" />
                </div>
@@ -137,7 +160,9 @@ var OneJoke = React.createClass({
                 
     return (
         <div id="one-joke">
+          <ReactCSSTransitionGroup component="p" transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
             <p>{j}</p>
+          </ReactCSSTransitionGroup>
         </div>
             )
     }
