@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+// var mongoose = require('mongoose');
+// var Schema = mongoose.Schema;
 
-var catBubbleSchema = new Schema ({
-   name: String
+// var catBubbleSchema = new Schema ({
+//    name: String
   
-});
+// });
 
-module.exports = mongoose.model('Bubble', catBubbleSchema);
+// module.exports = mongoose.model('Bubble', catBubbleSchema);

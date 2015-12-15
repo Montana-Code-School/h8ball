@@ -17,10 +17,10 @@ cookieParser    = require('cookie-parser'),
 db              = require('./model/db'),
 Joke            = require('./model/joke'),
 Cat             = require('./model/cat'),
-Bubble          = require('./model/catBubble'),
+// Bubble          = require('./model/catBubble'),
 jokeRoutes      = require('./routes/jokeRoutes'),
-ballRoutes      = require('./routes/ballRoutes'),
-catBubbleRoutes = require('./routes/catBubbleRoutes');
+ballRoutes      = require('./routes/ballRoutes');
+// catBubbleRoutes = require('./routes/catBubbleRoutes');
 
 
 
@@ -93,7 +93,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 
 app.use('/api/ball',ballRoutes);
 app.use('/api/jokes',jokeRoutes);
-app.use('/api/catBubble',catBubbleRoutes);
+// app.use('/api/catBubble',catBubbleRoutes);
 app.use('/api', router);
 
 
