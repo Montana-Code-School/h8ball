@@ -23,10 +23,6 @@
     z-index: -1;
 }
 
-.row{
-    height: 1000px;
-    width: 1000px;
-}
 .heading{
   color:black;
 }
@@ -48,8 +44,21 @@
     font-size: 1.2em;
 }
 #makeBallButton{
-    background: green;
-    margin-top: 5px;
+    background-image: radial-gradient(
+        rgba(0,0,0,1),
+        rgba(074, 112, 200, 0.6),
+        rgba(255, 0, 0, 0.7),
+        rgba(255, 0, 255, 0.7),
+        rgba(071, 255, 251, 0.7),
+        rgba(221, 160, 157, 0.7),
+        rgba(130, 031, 098, 0.7),
+        rgba(230, 210, 198, 0.7)
+        );
+    font-size: 1.9em;
+    height: 99%;
+    width: 98%;
+    color:white;
+    margin: auto;
 }
 .head{
     text-align:left;
@@ -84,7 +93,7 @@
     font-size: 32px;
 }
 #makeYourOwn{
-    width: 400px;
+    width: 420px;
     text-align: center;
     
 }
@@ -132,14 +141,29 @@
     margin-right: auto;
     width: 100%;
 }
-
-#comment{
-    font-size: 250px;
-    color:white;
-
+.comment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size:2em;
+}
+#chatBubble{    
+    z-index: -1;
+    
 }
 #catWords{
-    color:black;
+    position: absolute;
+    top: 27%;
+    right: 34%;
+    color: black;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    max-width: 178px;
+    max-height: 50px;
+    overflow: hidden;
+
+    
 }
 #background{
     background-color: #fefdfb;

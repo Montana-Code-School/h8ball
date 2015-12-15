@@ -75,7 +75,7 @@ var App = React.createClass({
         return (
         <div>
           <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
-            <nav className="navbar navbar-default" role="navigation">
+            <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container-fluid">
                 <div className="navbar-header">
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -115,18 +115,25 @@ var App = React.createClass({
                   </ul>
               </li>
             </div>
-              <div className="col-md-2 col-offset-md-8"> 
-                <JokeWithCat data={this.state.bubbleData} />
+              <div className="col-md-8" >
+                <div className="ball" onClick={this.loadJokesFromServer}>
+                  <div id="words">
+                    <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+                  </div>
+                  <img className="image-responsive" id="8ball" src="img/8ball.png" />
+                </div>
               </div>
-              <div className="col-md-10" >
-              <div className="ball" onClick={this.loadJokesFromServer}>
-              <div id="words">
-                  <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
-              </div>
-                <img className="image-responsive" id="8ball" src="img/8ball.png" />
-             </div>
+                <div className="col-md-3">
+                  <div className="comment">
+                    <div id="catWords"> 
+                      <JokeWithCat data={this.state.bubbleData} />
+                    </div>
+                    <div>
+                      <img className="image-responsive" id="chatBubble" src="img/chatBubble.png" />
+                    </div>
+                  </div>
+                </div>
             </div>
-        </div>
         );
     }
 });
@@ -206,10 +213,10 @@ var NewBall = React.createClass({
         return (
                 <div>
                     <form method="POST">
-                        <h1 id="formHead">Make your own Magic 8 Ball!</h1>
+                        <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
                         <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
-                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your responses"/>               
-                        <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
+                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your answers, separate them with a comma"/>               
+                        <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
                     </form>
                 </div>
         );
@@ -220,8 +227,8 @@ var JokeWithCat = React.createClass({
     render: function() {
         return (
         <div>
-          <i id="comment" className="fa fa-comment fa-flip-horizontal"><span id="catWords">{this.props.data}</span></i>
           
+          <h3>{this.props.data}</h3>
         </div>
         );
     }
