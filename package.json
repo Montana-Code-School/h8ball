@@ -33,7 +33,7 @@
     "morgan": "^1.6.1",
     "passport": "^0.3.0",
     "passport-local": "^1.0.0",
-    "react": "^0.13.0",
+    "react": "^0.14.3",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
     "reactify": "^1.1.1",
@@ -48,7 +48,7 @@
     
   },
   "engines": {
-    "node": "4.1.0"
+    "node": "5.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.0.14",

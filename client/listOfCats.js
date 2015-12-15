@@ -112,7 +112,7 @@ var App = React.createClass({
             </nav>
             <div>
               <li className="dropdown" id="pushingCatsDown">
-                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN SHAKE THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
+                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SHAKE AND SEE IF IT WILL COME TRUE</h2> 
               </li>
             </div>
              <div className="col-md-8" >
