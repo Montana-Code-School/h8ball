@@ -100,7 +100,7 @@ var App = React.createClass({
                         </ul>
                     </li>
                     <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SEARCH OUR VARIETY OF SPECIAL BALLS<span className="caret"></span></a>
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></a>
                         <ul className="dropdown-menu" id="preMade">
                           <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
                         </ul>
@@ -112,10 +112,10 @@ var App = React.createClass({
             </nav>
             <div>
               <li className="dropdown" id="pushingCatsDown">
-                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN SHAKE THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
+                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
               </li>
             </div>
-             <div className="col-md-8" >
+             <div className="col-md-6 col-xs-6" >
                <div className="ball" onClick={this.loadJokesFromServer}>
                  <div id="words">
                    <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>

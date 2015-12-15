@@ -142,13 +142,14 @@ color:hotpink;
   padding-top: 30px;
   margin-top: 30px;
   margin-bottom: 150px;
-  height: 100px;
+  height: 80px;
 
 }
 /*********************CAT BUBBLE***************************/
 
 #chatBubble{    
-  z-index: -1;  
+  z-index: -1;
+    
 }
 #catWords{
   position: absolute;
