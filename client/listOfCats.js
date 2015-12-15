@@ -99,12 +99,7 @@ var App = React.createClass({
                           <NewBall data={this.state.allCats} />
                         </ul>
                     </li>
-                    <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></a>
-                        <ul className="dropdown-menu" id="preMade">
-                          <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
-                        </ul>
-                    </li>
+                    
                     <li> <a href="about.html">ABOUT</a></li>
                   </ul>
                 </div>
@@ -115,6 +110,12 @@ var App = React.createClass({
                 <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
               </li>
             </div>
+            <li className="dropdown">
+              <h2 id="catball"className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></h2>
+                <ul className="dropdown-menu" id="preMade">
+                  <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                </ul>
+            </li>
              <div className="col-md-6 col-xs-6" >
                <div className="ball" onClick={this.loadJokesFromServer}>
                  <div id="words">
@@ -233,7 +234,7 @@ var JokeWithCat = React.createClass({
     render: function() {
         return (
         <div>
-         <h3>{this.props.data}</h3>
+         <h3>ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h3>
           
         </div>
         );
