@@ -1,145 +1,165 @@
-
 *{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 .ball{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    font-size:2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size:2em;
 }
 
 #words{
-    position: absolute;
-    top: 60%;
-    right: 50%;
-    color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
+  position: absolute;
+  top: 60%;
+  right: 50%;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 #8ball{
-    z-index: -1;
+  z-index: -1;
 }
 
-.row{
-    height: 1000px;
-    width: 1000px;
-}
 .heading{
-  color:black;
+color:black;
 }
 .heading:hover{
-  color:darkgrey;
+color:darkgrey;
 }
 #jokeOptions{
-    margin-top: 100px;
-    text-align: center;
+  margin-top: 100px;
+  text-align: center;
 }
 #jokeForm{
-    height: 50px;
-    background-color: transparent;
-    color: tomato;
-    font-size: 1.9em;
+  height: 50px;
+  background-color: transparent;
+  color: tomato;
+  font-size: 1.9em;
 }
 #catFrom{
-    background-color: transparent;
-    font-size: 1.2em;
+  background-color: transparent;
+  font-size: 1.2em;
 }
 #makeBallButton{
-    background: green;
-    margin-top: 5px;
+  background-image: radial-gradient(
+      rgba(0,0,0,1),
+      rgba(074, 112, 200, 0.6),
+      rgba(255, 0, 0, 0.7),
+      rgba(255, 0, 255, 0.7),
+      rgba(071, 255, 251, 0.7),
+      rgba(221, 160, 157, 0.7),
+      rgba(130, 031, 098, 0.7),
+      rgba(230, 210, 198, 0.7)
+      );
+  font-size: 1.9em;
+  height: 99%;
+  width: 98%;
+  color:white;
+  margin: auto;
 }
 .head{
-    text-align:left;
-    margin-top: 25px;
+  text-align:left;
+  margin-top: 25px;
 }
 #idx-img{
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    position: fixed;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .jumbotron{
-    background: url("img/catFlyingInSpace.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
-    margin: 0;
-    opacity: 0.7;
-    padding: 0;
-   /* width: 100%;*/
+  background: url("img/catFlyingInSpace.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin: 0;
+  opacity: 0.7;
+  padding: 0;
+ /* width: 100%;*/
 }
 .navbar, .navbar-default, .navbar-collapse, .nav {
-    background-color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 24px;
+  background-color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 24px;
 }
 #brand {
-    background-color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 32px;
+  background-color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 32px;
 }
 #makeYourOwn{
-    width: 400px;
-    text-align: center;
-    
+  width: 420px;
+  text-align: center;
+  
 }
 #makeYourOwn textarea {
-    height: 100px;
-    text-align: center;
+  height: 100px;
+  text-align: center;
 }
 .rainbow {
-  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-  color:transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+color:transparent;
+-webkit-background-clip: text;
+background-clip: text;
 }
 #preMade{
-    background: transparent;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    margin-left: 50px;
-    
+  background: transparent;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin-left: 50px;
+  
 }
 #preMade button {
-    color: black;
-    
+  color: black;
+  
 }
 #dropDown{
-    color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    margin-left:50px;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  margin-left:50px;
+  margin-top: 50px;
+  text-align: center;
+  width: 250px;
+}
+#dropDown span {
+    padding-top: 50px;
     margin-top: 50px;
-    /*border: 1px solid white;*/
-    width: 250px;
-}
-#logIn{
-    font-size: 24px;
-}
-#nav{
-    margin-bottom: 0;
-}
-#magic8Ball{
-    color: white;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-}
-#profiles{
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
 }
 
-#comment{
-    font-size: 7.4em;
-    color:white;
+#magic8Ball{
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+#profiles{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.comment{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  font-size:2em;
+}
+#chatBubble{    
+  z-index: -1;
+  
 }
 #catWords{
-    color:black;
+  position: absolute;
+  top: 27%;
+  right: 24%;
+  color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+ 
+  
 }
 #background{
-    background-color: #fefdfb;
+  background-color: #fefdfb  ;
 }

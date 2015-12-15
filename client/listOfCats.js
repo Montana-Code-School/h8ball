@@ -80,7 +80,7 @@ var App = React.createClass({
         return (
         <div>
           <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
-            <nav className="navbar navbar-default" role="navigation">
+            <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container-fluid">
                 <div className="navbar-header">
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -99,14 +99,6 @@ var App = React.createClass({
                           <NewBall data={this.state.allCats} />
                         </ul>
                     </li>
-                    <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOG IN<span className="caret"></span></a>
-                        <ul className="dropdown-menu" id="logIn">
-                          <li> <a href="/login">LOGIN</a></li>
-                          <li> <a href="/profile">PROFILE</a></li>
-                          <li> <a href="/signup">SIGNUP</a></li>
-                        </ul>
-                    </li>
                     <li> <a href="about.html">ABOUT</a></li>
                     <li>
                   </li>
@@ -115,25 +107,31 @@ var App = React.createClass({
               </div>
             </nav>
             <div>
-              <li className="dropdown">
+              <li className="dropdown" id="pushingCatsDown">
                 <h2 className="dropdown-toggle" id="dropDown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SELECT YOUR CATEGORY<span className="caret"></span></h2>
                   <ul className="dropdown-menu" id="preMade">
                     <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
                   </ul>
               </li>
             </div>
-              <div className="col-md-10" >
-              <div className="ball" onClick={this.loadJokesFromServer}>
-              <div id="words">
-                  <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
-              </div>
-                <img className="image-responsive" id="8ball" src="img/8ball.png" />
+             <div className="col-md-8" >
+               <div className="ball" onClick={this.loadJokesFromServer}>
+                 <div id="words">
+                   <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+                 </div>
+                 <img className="image-responsive" id="8ball" src="img/8ball.png" />
+               </div>
              </div>
-
-             <div> 
-             <JokeWithCat data={this.state.bubbleData} />
-             </div>
-            </div>
+               <div className="col-md-3">
+                 <div className="comment">
+                   <div id="catWords"> 
+                     <JokeWithCat data={this.state.bubbleData} />
+                   </div>
+                   <div>
+                     <img className="image-responsive" id="chatBubble" src="img/chatBubble.png" />
+                   </div>
+                 </div>
+               </div>
         </div>
         );
     }
@@ -219,13 +217,13 @@ var NewBall = React.createClass({
     render: function() {
         return (
                 <div>
-                    <form method="POST">
-                        <h1 id="formHead">Make your own Magic 8 Ball!</h1>
-                        <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
-                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your responses"/>               
-                        <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-primary">Submit</button>
-                    </form>
-                </div>
+                   <form method="POST">
+                       <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
+                       <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
+                       <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your answers, separate them with a comma"/>               
+                       <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
+                   </form>
+               </div>
         );
     }
 });
@@ -234,7 +232,7 @@ var JokeWithCat = React.createClass({
     render: function() {
         return (
         <div>
-          <i id="comment" className="fa fa-comment"><span id="catWords">{this.props.data}</span></i>
+         <h3>{this.props.data}</h3>
           
         </div>
         );
