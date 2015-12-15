@@ -130,25 +130,11 @@ color:hotpink;
  
 }
 /******************************DIRCETIONS************************************/
-#dropDown{
- color: black;
- font-family: 'Yanone Kaffeesatz', sans-serif;
- text-align: center;
- border: solid white;
- background-color: yellow;
- -webkit-box-shadow: inset 0px 3px 79px 8px rgba(60,214,21,1);
- -moz-box-shadow: inset 0px 3px 79px 8px rgba(60,214,21,1);
- box-shadow: inset 0px 3px 79px 8px rgba(60,214,21,1);
- padding-top: 30px;
- margin-top: 30px;
- margin-bottom: 15px;
- height: 80px;
-
-}
 
 #catball {
  color: white;
  margin-left: 50px;
+ padding-top: 75px;
 }
 /*********************CAT BUBBLE***************************/
 

@@ -105,15 +105,6 @@ var App = React.createClass({
                 </div>
               </div>
             </nav>
-            <div>
-              <li className="dropdown" id="pushingCatsDown">
-<<<<<<< HEAD
-                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SHAKE AND SEE IF IT WILL COME TRUE</h2> 
-=======
-                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
->>>>>>> 646d614510cc5c7452f7a014c43ebdce0426677b
-              </li>
-            </div>
 
             <li className="dropdown">
               <h2 id="catball"className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></h2>
@@ -224,15 +215,7 @@ var NewBall = React.createClass({
     render: function() {
         return (
                 <div>
-<<<<<<< HEAD
-                    <form method="POST">
-                        <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
-                        <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
-                        <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your answers, separate them with a comma"/>               
-                        <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
-                    </form>
-                </div>
-=======
+
                    <form method="POST">
                        <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
                        <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
@@ -240,7 +223,6 @@ var NewBall = React.createClass({
                        <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
                    </form>
                </div>
->>>>>>> 646d614510cc5c7452f7a014c43ebdce0426677b
         );
     }
 });
@@ -248,11 +230,10 @@ var JokeWithCat = React.createClass({
 
     render: function() {
         return (
-        <div>
-<<<<<<< HEAD
-=======
-         <h3>ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h3>
->>>>>>> 646d614510cc5c7452f7a014c43ebdce0426677b
+        <div>         
+
+          <h3>Click on the ball to reveal the answer to your question.</h3>
+
           
           <h3>{this.props.data}</h3>
         </div>
