@@ -11,8 +11,9 @@
  background-attachment: fixed;
 }
 .rainbow {
- background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
- background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+ /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, yellow), color-stop(0.15, #aff), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(1, #f22) );
+ background-image: gradient( linear, left top, right top, color-stop(0, yellow), color-stop(0.15, #aff), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(1, #f22) );*/
+ background: linear-gradient(to right, springgreen, gold, magenta);
  color:transparent;
  -webkit-background-clip: text;
  background-clip: text;
@@ -80,11 +81,24 @@ img.resize{
 }
 
 /*****************Make New Ball **********************************/
-#jokeForm {
+/*#jokeForm {
  height: 50px;
  color: tomato;
  font-size: 1.4em;
  background-color: grey;
+}*/
+
+.makeJoke{
+  width: 800px;
+ 
+}
+
+#catForm, #jokeForm{
+  font-size: 1.5em;
+}
+
+#formHead{
+  text-align: center;
 }
 #makeBallButton {
  background-image: radial-gradient(
@@ -98,23 +112,14 @@ img.resize{
      rgba(230, 210, 198, 0.7)
      );
  font-size: 1.9em;
- height: 85%;
- width: 85%;
+ height: 100%;
+ width: 100%;
  color:white;
  margin: auto;
- border-radius: 95%;
+ /*border-radius: 95%*/;
 }
-#makeYourOwn{
- width: 320px;
- height: 220px;
- text-align: center;
- background-color: grey; 
-}
+
 /*****************************ABOUT PAGE********************************/
-/*.head{
- text-align:left;
- margin-top: 25px;
-}*/
 
 #profiles{
  margin-left: auto;
@@ -132,12 +137,9 @@ color:black;
 .heading:hover {
 color:hotpink;
 }
-/*************************OUR BALLS FORM*******************************/
+/*************************CATEGORY LIST*******************************/
 
-#catFrom{
- background-color: grey;
- font-size: 1.2em;
-}
+
 
 #preMade{
  background: transparent;
