@@ -1,5 +1,5 @@
 var React = require("react");
-var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
 
 var App = React.createClass({
     getInitialState: function(){
@@ -160,9 +160,9 @@ var OneJoke = React.createClass({
                 
     return (
         <div id="one-joke">
-          <ReactCSSTransitionGroup component="p" transitionName="example" transitionEnterTimeout={500} transitionLeaveTimeout={300}>
+          
             <p>{j}</p>
-          </ReactCSSTransitionGroup>
+          
         </div>
             )
     }
