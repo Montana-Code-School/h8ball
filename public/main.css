@@ -18,15 +18,35 @@
  background-clip: text;
 }
 /**********************Nav Bar*************************/
-.navbar, .navbar-default, .navbar-collapse, .nav {
- background-color: black;
+.navbar, .navbar-default, .navbar-collapse, .nav, #navbar-collapse-1 {
  font-family: 'Yanone Kaffeesatz', sans-serif;
  font-size: 24px;
+ margin-bottom: 0;
+ background-color: black;
+ border-bottom: black;
+ color: white;
+ margin-bottom: 0;
+}
+
+span, a.dropdown-toggle {
+  color: white;
+  background-color: black;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: white !important;
+}
+
+a {
+  color: white;
 }
 #brand {
- background-color: black;
  font-family: 'Yanone Kaffeesatz', sans-serif;
  font-size: 32px;
+ background-color: black;
+ color: white;
+ border-style: none;
+
 }
 
 /**************************Ball Size and Position and Words****************************/
@@ -47,10 +67,12 @@
 }
 #8ball {
  z-index: -1;
+
 }
 img.resize{
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: 250px;
 }
 
 /*****************Make New Ball **********************************/
@@ -90,16 +112,6 @@ img.resize{
  margin-top: 25px;
 }*/
 
-.jumbotron{
- background: url("img/catFlyingInSpace.png");
- background-repeat: no-repeat;
- background-size: cover;
- height: 500px;
- margin: 0;
- opacity: 0.7;
- padding: 0;
-/* width: 100%;*/
-}
 #profiles{
  margin-left: auto;
  margin-right: auto;

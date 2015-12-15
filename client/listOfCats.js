@@ -2,7 +2,7 @@ var React = require("react");
 
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '', jokeData:[], allCats: [], bubbleData: [], liked: false}
+        return { catId: '', jokeData:[], allCats: [], liked: false}
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
@@ -42,7 +42,6 @@ var App = React.createClass({
             console.log("joke success");
             this.setState({jokeData: data});
             this.setState({liked: !this.state.liked});
-            this.loadBubblesFromServer();
           }.bind(this),
           error: function(xhr, status, err){
             console.log("broken ")
@@ -51,23 +50,6 @@ var App = React.createClass({
         });
     },
 
-      loadBubblesFromServer: function() {
-      console.log("going to get a single response for the cat bubble")
-         var url = '/api/catBubble/catBubble';
-          $.ajax({
-            url: url,
-            dataType: 'json',
-            cache: false,
-          success:function(data){
-            console.log("catsnark success");
-            this.setState({bubbleData: data});
-          }.bind(this),
-          error: function(xhr, status, err){
-            console.log("broken ")
-            console.error(status, err.toString());
-          }.bind(this)
-        });
-    },
     searchCats: function(){
       var thisCat = document.getElementById('searching').value;
       this.loadCatsFromServer(thisCat);
@@ -120,16 +102,6 @@ var App = React.createClass({
                  <img className="resize" id="8ball" src="img/8ball.png" />
                </div>
              </div>
-               <div className="col-md-3">
-                 <div>
-                   <div id="catWords"> 
-                     <JokeWithCat data={this.state.bubbleData} />
-                   </div>
-                   <div>
-                     <img className="resize" id="chatBubble" src="img/chatBubble.png" />
-                   </div>
-                 </div>
-               </div>
         </div>
         );
     }
@@ -147,7 +119,7 @@ var AllCategories = React.createClass({
     })
         return (
             <div>
-                <input type="text" placeholder="search Categories" id="searching" ref="search"/>
+                <input type="text" placeholder="Search Categories" id="searching" ref="search"/>
                 <button onClick={self.props.searchCats}>Search</button>
                 {cat}
             </div>
@@ -226,18 +198,5 @@ var NewBall = React.createClass({
         );
     }
 });
-var JokeWithCat = React.createClass({
 
-    render: function() {
-        return (
-        <div>         
-
-          <h3>Click on the ball to reveal the answer to your question.</h3>
-
-          
-          <h3>{this.props.data}</h3>
-        </div>
-        );
-    }
-});
 module.exports = App;
