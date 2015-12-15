@@ -63,6 +63,7 @@ router.route('/cat/:cat_id')
  });
 router.route('/search/:query')
 .get(function(req, res) {
+  console.log('searching for ', req.params.query);
     mongoose.model('Cat')
       .find({
         '$text': {

@@ -1,19 +1,20 @@
 var React = require("react");
+
 var App = React.createClass({
     getInitialState: function(){
         return { catId: '', jokeData:[], allCats: [], bubbleData: [], liked: false}
     },
     loadCatsFromServer: function(search) {
-    var url = "/api/ball/cats";
-    if(search){
-      url = url + '/search/' + search
-    }
+      var url = "/api/ball/cats";
+      if(search){
+        url = 'api/ball/search/' + search
+      }
         $.ajax({
           url: url,
           dataType: 'json',
           cache:false,
           success:function(data){
-            console.log("inside success" + JSON.stringify(data[0]))
+            console.log("inside success of loadCatsFromServer" + JSON.stringify(data[0]))
             this.setState({allCats:data});
           }.bind(this),
           error: function(xhr,status, err){
@@ -29,7 +30,7 @@ var App = React.createClass({
     });
     
   },
-    loadJokesFromServer: function(id) {
+  loadJokesFromServer: function(id) {
     console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
       var catId = this.state.catId;
@@ -67,6 +68,10 @@ var App = React.createClass({
           }.bind(this)
         });
     },
+    searchCats: function(){
+      var thisCat = document.getElementById('searching').value;
+      this.loadCatsFromServer(thisCat);
+    },
     componentDidMount: function(){
         this.loadCatsFromServer();
         this.loadJokesFromServer();
@@ -94,52 +99,52 @@ var App = React.createClass({
                           <NewBall data={this.state.allCats} />
                         </ul>
                     </li>
-                    <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">LOG IN<span className="caret"></span></a>
-                        <ul className="dropdown-menu" id="logIn">
-                          <li> <a href="/login">LOGIN</a></li>
-                          <li> <a href="/profile">PROFILE</a></li>
-                          <li> <a href="/signup">SIGNUP</a></li>
-                        </ul>
-                    </li>
+                    
                     <li> <a href="about.html">ABOUT</a></li>
                   </ul>
                 </div>
               </div>
             </nav>
             <div>
-              <li className="dropdown">
-                <h2 className="dropdown-toggle" id="dropDown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SELECT YOUR CATEGORY<span className="caret"></span></h2>
-                  <ul className="dropdown-menu" id="preMade">
-                    <AllCategories loadNewCats={this.loadNewCats} data={this.state.allCats} />
-                  </ul>
+              <li className="dropdown" id="pushingCatsDown">
+                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
               </li>
             </div>
-              <div className="col-md-8" >
-                <div className="ball" onClick={this.loadJokesFromServer}>
-                  <div id="words">
-                    <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
-                  </div>
-                  <img className="image-responsive" id="8ball" src="img/8ball.png" />
-                </div>
-              </div>
-                <div className="col-md-3">
-                  <div className="comment">
-                    <div id="catWords"> 
-                      <JokeWithCat data={this.state.bubbleData} />
-                    </div>
-                    <div>
-                      <img className="image-responsive" id="chatBubble" src="img/chatBubble.png" />
-                    </div>
-                  </div>
-                </div>
-            </div>
+
+            <li className="dropdown">
+              <h2 id="catball"className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></h2>
+                <ul className="dropdown-menu" id="preMade">
+                  <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                </ul>
+            </li>
+             <div className="col-md-6 col-xs-6" >
+               <div className="ball" onClick={this.loadJokesFromServer}>
+                 <div id="words">
+                   <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
+                 </div>
+                 <img className="resize" id="8ball" src="img/8ball.png" />
+               </div>
+             </div>
+               <div className="col-md-3">
+                 <div>
+                   <div id="catWords"> 
+                     <JokeWithCat data={this.state.bubbleData} />
+                   </div>
+                   <div>
+                     <img className="resize" id="chatBubble" src="img/chatBubble.png" />
+                   </div>
+                 </div>
+               </div>
+        </div>
         );
     }
 });
+
+
+
 var AllCategories = React.createClass({
     render: function() {
-        var self = this;
+        var self = this; 
         var cat = this.props.data.map(function(c){
             return (
                 <h2> <button onClick={self.props.loadNewCats.bind(this, c._id)}>{c.name}</button> </h2>
@@ -147,13 +152,16 @@ var AllCategories = React.createClass({
     })
         return (
             <div>
-                <input type="text" placeholder="search Categories" ref="search"/>
-                <button onClick={this.searchCats}>Search</button>
+                <input type="text" placeholder="search Categories" id="searching" ref="search"/>
+                <button onClick={self.props.searchCats}>Search</button>
                 {cat}
             </div>
         );
     }
 });
+
+window.hello = document.getElementById('searching');
+
 var OneJoke = React.createClass({
     render: function() {
         var joke = this.props.data;
@@ -212,6 +220,7 @@ var NewBall = React.createClass({
     render: function() {
         return (
                 <div>
+<<<<<<< HEAD
                     <form method="POST">
                         <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
                         <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
@@ -219,6 +228,15 @@ var NewBall = React.createClass({
                         <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
                     </form>
                 </div>
+=======
+                   <form method="POST">
+                       <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
+                       <input id="catFrom" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
+                       <input id="jokeForm" type="text" ref="joke" className="form-control" placeholder="Add your answers, separate them with a comma"/>               
+                       <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
+                   </form>
+               </div>
+>>>>>>> 646d614510cc5c7452f7a014c43ebdce0426677b
         );
     }
 });
@@ -227,6 +245,10 @@ var JokeWithCat = React.createClass({
     render: function() {
         return (
         <div>
+<<<<<<< HEAD
+=======
+         <h3>ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h3>
+>>>>>>> 646d614510cc5c7452f7a014c43ebdce0426677b
           
           <h3>{this.props.data}</h3>
         </div>
