@@ -107,7 +107,11 @@ var App = React.createClass({
             </nav>
             <div>
               <li className="dropdown" id="pushingCatsDown">
+<<<<<<< HEAD
+                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SHAKE AND SEE IF IT WILL COME TRUE</h2> 
+=======
                 <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN CLICK THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
+>>>>>>> 646d614510cc5c7452f7a014c43ebdce0426677b
               </li>
             </div>
 
