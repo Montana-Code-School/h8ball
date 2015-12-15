@@ -1,48 +1,66 @@
 *{
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  list-style: none;
 }
+#idx-img{
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/**********************Nav Bar*************************/
+.navbar, .navbar-default, .navbar-collapse, .nav {
+  background-color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 24px;
+}
+#brand {
+  background-color: black;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 32px;
+}
+
+/**************************Ball Size and Position and Words****************************/
 .ball{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: green;
   text-align: center;
   font-size:2em;
 }
-
-#words{
+#words {
   position: absolute;
   top: 60%;
   right: 50%;
   color: white;
   font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-
-#8ball{
+#8ball {
   z-index: -1;
 }
+img.resize{
+   max-width: 70%;
+   max-height: 70%;
+}
 
-.heading{
-color:black;
-}
-.heading:hover{
-color:darkgrey;
-}
-#jokeOptions{
-  margin-top: 100px;
-  text-align: center;
-}
-#jokeForm{
+/*****************Make New Ball **********************************/
+#jokeForm {
   height: 50px;
-  background-color: transparent;
   color: tomato;
-  font-size: 1.9em;
+  font-size: 1.4em;
+  background-color: grey;
 }
-#catFrom{
-  background-color: transparent;
-  font-size: 1.2em;
-}
-#makeBallButton{
+#makeBallButton {
   background-image: radial-gradient(
       rgba(0,0,0,1),
       rgba(074, 112, 200, 0.6),
@@ -54,23 +72,24 @@ color:darkgrey;
       rgba(230, 210, 198, 0.7)
       );
   font-size: 1.9em;
-  height: 99%;
-  width: 98%;
+  height: 85%;
+  width: 85%;
   color:white;
   margin: auto;
+  border-radius: 95%;
 }
-.head{
+#makeYourOwn{
+  width: 320px;
+  height: 220px;
+  text-align: center;
+  background-color: grey; 
+}
+/*****************************ABOUT PAGE********************************/
+/*.head{
   text-align:left;
   margin-top: 25px;
-}
-#idx-img{
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  position: fixed;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
+}*/
+
 .jumbotron{
   background: url("img/catFlyingInSpace.png");
   background-repeat: no-repeat;
@@ -81,85 +100,63 @@ color:darkgrey;
   padding: 0;
  /* width: 100%;*/
 }
-.navbar, .navbar-default, .navbar-collapse, .nav {
-  background-color: white;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 24px;
+#profiles{
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
-#brand {
-  background-color: white;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 32px;
+#background{
+  background-color: #fefdfb  ;
 }
-#makeYourOwn{
-  width: 420px;
-  text-align: center;
-  
+/****************************About Dev's heading*****************************/
+.heading {
+color:black;
+
 }
-#makeYourOwn textarea {
-  height: 100px;
-  text-align: center;
+.heading:hover {
+color:hotpink;
 }
-.rainbow {
-background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
-color:transparent;
--webkit-background-clip: text;
-background-clip: text;
+/*************************OUR BALLS FORM*******************************/
+
+#catFrom{
+  background-color: grey;
+  font-size: 1.2em;
 }
+
 #preMade{
   background: transparent;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   margin-left: 50px;
   
 }
-#preMade button {
-  color: black;
-  
-}
+/******************************DIRCETIONS************************************/
 #dropDown{
-  color: white;
+  color: black;
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  margin-left:50px;
-  margin-top: 50px;
   text-align: center;
-  width: 250px;
-}
-#dropDown span {
-    padding-top: 50px;
-    margin-top: 50px;
-}
+  border: solid white;
+  background-color: yellow;
+  -webkit-box-shadow: inset 0px 3px 79px 8px rgba(60,214,21,1);
+  -moz-box-shadow: inset 0px 3px 79px 8px rgba(60,214,21,1);
+  box-shadow: inset 0px 3px 79px 8px rgba(60,214,21,1);
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 150px;
+  height: 100px;
 
-#magic8Ball{
-  color: white;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-#profiles{
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-}
-.comment{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  text-align: center;
-  font-size:2em;
-}
+/*********************CAT BUBBLE***************************/
+
 #chatBubble{    
-  z-index: -1;
-  
+  z-index: -1;  
 }
 #catWords{
   position: absolute;
-  top: 27%;
-  right: 24%;
+  top: 10%;
+  right: 40%;
   color: black;
   font-family: 'Yanone Kaffeesatz', sans-serif;
- 
-  
+  max-width: 120px;
+   
 }
-#background{
-  background-color: #fefdfb  ;
-}
+

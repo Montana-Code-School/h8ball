@@ -99,19 +99,20 @@ var App = React.createClass({
                           <NewBall data={this.state.allCats} />
                         </ul>
                     </li>
+                    <li className="dropdown">
+                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SEARCH OUR VARIETY OF SPECIAL BALLS<span className="caret"></span></a>
+                        <ul className="dropdown-menu" id="preMade">
+                          <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
+                        </ul>
+                    </li>
                     <li> <a href="about.html">ABOUT</a></li>
-                    <li>
-                  </li>
                   </ul>
                 </div>
               </div>
             </nav>
             <div>
               <li className="dropdown" id="pushingCatsDown">
-                <h2 className="dropdown-toggle" id="dropDown" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">SELECT YOUR CATEGORY<span className="caret"></span></h2>
-                  <ul className="dropdown-menu" id="preMade">
-                    <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
-                  </ul>
+                <h2 className="dropdown-toggle" id="dropDown">ASK A QUESTION THEN SHAKE THE MAGIC BALL TO SEE IF IT WILL COME TRUE</h2> 
               </li>
             </div>
              <div className="col-md-8" >
@@ -119,16 +120,16 @@ var App = React.createClass({
                  <div id="words">
                    <OneJoke jokeDisplay={this.state.like} data={this.state.jokeData}/>
                  </div>
-                 <img className="image-responsive" id="8ball" src="img/8ball.png" />
+                 <img className="resize" id="8ball" src="img/8ball.png" />
                </div>
              </div>
                <div className="col-md-3">
-                 <div className="comment">
+                 <div>
                    <div id="catWords"> 
                      <JokeWithCat data={this.state.bubbleData} />
                    </div>
                    <div>
-                     <img className="image-responsive" id="chatBubble" src="img/chatBubble.png" />
+                     <img className="resize" id="chatBubble" src="img/chatBubble.png" />
                    </div>
                  </div>
                </div>
