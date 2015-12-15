@@ -11,8 +11,7 @@
  background-attachment: fixed;
 }
 .rainbow {
- /*background-image: -webkit-gradient( linear, left top, right top, color-stop(0, yellow), color-stop(0.15, #aff), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(1, #f22) );
- background-image: gradient( linear, left top, right top, color-stop(0, yellow), color-stop(0.15, #aff), color-stop(0.3, #22f), color-stop(0.6, #2f2), color-stop(0.75, #2f2), color-stop(1, #f22) );*/
+ 
  background: linear-gradient(to right, springgreen, gold, magenta);
  color:transparent;
  -webkit-background-clip: text;
@@ -81,42 +80,33 @@ img.resize{
 }
 
 /*****************Make New Ball **********************************/
-/*#jokeForm {
- height: 50px;
- color: tomato;
- font-size: 1.4em;
- background-color: grey;
-}*/
+
 
 .makeJoke{
   width: 800px;
- 
+  background-color: rgba(255,255,200,1);
+  
 }
 
 #catForm, #jokeForm{
   font-size: 1.5em;
+  background-color: rgba(255,255,200,1);
+
 }
 
 #formHead{
   text-align: center;
+
+
 }
 #makeBallButton {
- background-image: radial-gradient(
-     rgba(0,0,0,1),
-     rgba(074, 112, 200, 0.6),
-     rgba(255, 0, 0, 0.7),
-     rgba(255, 0, 255, 0.7),
-     rgba(071, 255, 251, 0.7),
-     rgba(221, 160, 157, 0.7),
-     rgba(130, 031, 098, 0.7),
-     rgba(230, 210, 198, 0.7)
-     );
+ background: linear-gradient(to right, springgreen, gold, magenta);
  font-size: 1.9em;
  height: 100%;
  width: 100%;
- color:white;
+ color: black;
  margin: auto;
- /*border-radius: 95%*/;
+
 }
 
 /*****************************ABOUT PAGE********************************/
@@ -147,25 +137,10 @@ color:hotpink;
  margin-left: 50px;
  
 }
-/******************************DIRCETIONS************************************/
 
 #catball {
  color: white;
  margin-left: 50px;
  padding-top: 75px;
 }
-/*********************CAT BUBBLE***************************/
 
-#chatBubble{    
- z-index: -1;
-
-}
-#catWords{
- position: absolute;
- top: 10%;
- right: 40%;
- color: black;
- font-family: 'Yanone Kaffeesatz', sans-serif;
- max-width: 120px;
-  
-}

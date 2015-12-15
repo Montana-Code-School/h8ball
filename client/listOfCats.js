@@ -189,7 +189,7 @@ var NewBall = React.createClass({
                 <div>
 
                    <form className="makeJoke" method="POST">
-                       <h1 id="formHead" className="rainbow">Make your own Magic 8 Ball!</h1>
+                       <h1 id="formHead" className="rainbow"><strong>Make your own Magic 8 Ball!</strong></h1>
                        <input id="catForm" type="text" ref="cat" className="form-control" placeholder="Add Your Category"/>
                        <textarea id="jokeForm" type="text" ref="joke" rows="7" className="form-control" placeholder="Add your answers, separate them with a comma"></textarea>               
                        <button id="makeBallButton"onClick={this.handleSubmit} type="submit" className="btn btn-block">Submit</button>
