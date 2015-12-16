@@ -37,6 +37,14 @@ router.route('/cat/:id')
 
    })
  })
+  .get(function(req, res){
+     mongoose.model("Cat").findById(req.params.id)
+     .populate('jokes').exec(function(err, cat){
+         if(err)
+           res.send("You didn't a random joke");
+         res.json(cat);
+      })
+  })
 
 router.route('/cat/justone/:cat_id')
 
