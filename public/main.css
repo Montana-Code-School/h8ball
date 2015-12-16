@@ -224,11 +224,14 @@ background-color: rgba(0,15,0,0.9);
 /****************************About Dev's heading*****************************/
 .heading {
 color:white;
-
+}
+.title{
+  color: white;
 }
 .heading:hover {
-color:hotpink;
+color:pink;
 }
+
 
 #profileDiv{
   background: rgba(0, 0, 0, .85);
@@ -246,21 +249,16 @@ color:hotpink;
 
 .sparkley {
 
-  background: lighten( $buttonBackground , 10% );
-  color: $buttonColor;
-  border: none;
-
   padding: 16px 36px;
   font-weight: normal;
   
   border-radius: 3px;
   transition: all 0.25s ease;
   
-  box-shadow: 0 38px 32px -23px black;
+  box-shadow: 0 38px 32px -25px black;
   margin: 0 1em 1em;
   
   &:hover {
-   
     background: $buttonBackground;
     color: transparentize( $buttonColor,0.8 );
     
