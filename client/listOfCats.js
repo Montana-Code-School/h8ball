@@ -1,8 +1,9 @@
 var React = require("react");
+var CatBub = require('./catBubble');
 
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '567079df8cb57f1b857e2155', jokeData:[], activeCat: [], allCats: [], liked: false}
+        return { catId: '567079df8cb57f1b857e2155', jokeData:[], activeCat: '', allCats: [], liked: false}
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
@@ -16,14 +17,6 @@ var App = React.createClass({
           cache:false,
           success:function(data){
             console.log("inside success of loadCatsFromServer" + data)
-            data.forEach(function(item){
-              console.log("inside for each and", item._id.toString(), self.state.catId.toString())
-              if(item._id.toString() == self.state.catId.toString()){
-                console.log("inside if")
-                self.setState({activeCat: item.name});
-                console.log("I make STATE", self.state.activeCat)
-              }
-            })
             this.setState({allCats:data});
           }.bind(this),
           error: function(xhr,status, err){
@@ -32,13 +25,33 @@ var App = React.createClass({
           }.bind(this)
         });
   },
+  findCatName: function(id){
+    console.log("find cat name", id)
+        var id = id;
+        $.ajax({
+          url: '/api/jokes/cat/' + id ,
+          dataType: 'json',
+          cache:false,
+          success:function(data){
+            console.log("inside success of findCatName" + data)
+            this.setState({activeCat: data.name});
+          }.bind(this),
+          error: function(xhr,status, err){
+            console.log("broken url is /api/jokes/cat/ ")
+            console.error(this.props.url, status,err.toString());
+          }.bind(this)
+        });
+  },
+
+
   loadNewCats: function(id){
     var id = id;
-    return this.setState({
+    this.setState({
         catId: id 
     });
-    
+    this.findCatName(id);
   },
+
   loadJokesFromServer: function(id) {
     console.log("going to get a single joke from server with id")
       var url = '/api/jokes/cat/justone/';
@@ -73,11 +86,6 @@ var App = React.createClass({
         this.loadJokesFromServer();
     },
     render: function() {
-      if(this.state.activeCat){
-        var name = this.state.activeCat
-      } else { 
-        var name = "NOTHING AT ALL"
-      }
         return (
         <div>
           <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
@@ -111,7 +119,7 @@ var App = React.createClass({
               </div>
             </nav>
 
-           
+           <div className="row">
              <div className="col-md-6 col-xs-6" >
                <div className="ball" onClick={this.loadJokesFromServer}>
                  <div id="words">
@@ -121,6 +129,10 @@ var App = React.createClass({
                  <img className="resize" id="8ball" src="img/8ball.png" />
                </div>
              </div>
+             <div className="col-xs-4">
+              <CatBub name={this.state.activeCat} />
+             </div>
+            </div>
         </div>
         );
     }

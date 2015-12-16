@@ -185,14 +185,15 @@ background-color: rgba(0,15,0,0.9);
  width: 200px;
  padding: 8px;
  color: black;
- -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb ), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00 )) 21 30 30 21 repeat repeat;
+ border-top: solid 2px springgreen;
+ border-bottom: solid 2px magenta;
+ border-left: solid 2px gold;
+ border-right: solid 2px gold;
  text-align: center;
- outline: none;
  text-decoration: none;
  background-color: rgba(220,215,200,0.4);
  margin-right: 25px;
- margin-left: 25px;
- font-size: 1em;
+ background: linear-gradient(to right, springgreen, gold, magenta);
  margin-left: 16%; 
 }
 
@@ -229,10 +230,6 @@ color:pink;
 
 #profileDiv{
   background: rgba(0, 0, 0, .85);
- /* background-image: url(img/starryNight.png);*/
-  /*background-size:     cover;                      
-  background-repeat:   no-repeat;
-    background-position: center center;*/
     height: 75%;
     width: 100%;
     margin-top: 0;
