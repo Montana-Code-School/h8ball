@@ -1,6 +1,5 @@
 var React = require("react");
 
-
 var App = React.createClass({
     getInitialState: function(){
         return { catId: '567079df8cb57f1b857e2155', jokeData:[], activeCat: [], allCats: [], liked: false}
