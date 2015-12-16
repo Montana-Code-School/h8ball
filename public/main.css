@@ -4,7 +4,7 @@
 }
 
 #nightSky{
-    background-image: url(img/nightSky.jpeg);
+    background-image: url("img/nightSky.jpeg");
     background-size:     cover;                      
     background-repeat:   no-repeat;
     background-position: center center;
@@ -76,15 +76,6 @@ a.dropdown-toggle:hover {
 a.dropdown-toggle{
   color: white !important;
 }
-
-/*.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
-  background-color: black !important;
-}*/
-
-/*.navbar-default .navbar-nav>li>a {
-    color: white !important;
-}*/
-
 
 #landingNav{
   background-color: rgba(255,255,255,.8);

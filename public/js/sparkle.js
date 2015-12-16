@@ -21,7 +21,6 @@ $(function() {
   });
   
   
-  
   // $(".face").sparkleh({
   //   count: 20,
   //   color: "#00ff00",

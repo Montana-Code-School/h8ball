@@ -1,18 +1,45 @@
 <html>
 <head>
-    <title>Node Authentication</title>
+    <title>Log In</title>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="style/login.css">
+
     <style>
         body         { padding-top:80px; }
     </style>
 </head>
-<body>
+<body id="nightSky">
+<!-- ************************ START NAVIGATION **************************** -->
+
+<nav id="landingNav" class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/landing.html" style="font-size: 32px;">MAGIC 8 BALL</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/landing.html" style="font-size: 24px;">HOME</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ************************* START CONTENT *************************** -->
 <div class="container">
 <div class="col-sm-6 col-sm-offset-3">
 
-    <h1><span class="fa fa-sign-in"></span> Login</h1>
+    <h1><span class="fa fa-sign-in"></span> LOGIN</h1>
 
     <% if (message.length > 0) { %>
         <div class="alert alert-danger"><%= message %></div>
@@ -21,21 +48,26 @@
     <!-- LOGIN FORM -->
     <form action="/login" method="post">
         <div class="form-group">
-            <label>Email</label>
+            <label>EMAIL</label>
             <input type="text" class="form-control" name="email">
         </div>
         <div class="form-group">
-            <label>Password</label>
+            <label>PASSWORD</label>
             <input type="password" class="form-control" name="password">
         </div>
-
-        <button type="submit" class="btn btn-warning btn-lg">Login</button>
+        <div class="login">
+        <button type="submit" class="btn btn-lg">Login</button>
+        </div>
     </form>
+    <br>
+    <br>
+    <br>
 
     <hr>
 
-    <p>Need an account? <a href="/signup">Signup</a></p>
-    <p>Or go <a href="/">home</a>.</p>
+
+    <p>Need an account?<a href="/signup"> Signup!</a></p>
+    
 
 </div>
 </div>
