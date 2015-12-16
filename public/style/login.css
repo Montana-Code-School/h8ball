@@ -1,0 +1,111 @@
+body {
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ background: #313944 ;
+ position: absolute;
+ font-weight: lighter;
+ color: #FFF;
+ top: 0;
+ right: 0;
+ left: 0;
+ bottom: 0;
+}
+#center {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+#login-row {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -150px;
+  background: #464D56 ;
+}
+#login-icon {
+  text-align: center;
+  width: 50px;
+  height: 34px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -25px;
+  background: #38424F ;
+}
+#login {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -90px;
+  margin-top: -10px;
+}
+#password-row {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -98px;
+  background: #464D56 ;
+}
+#password-icon {
+  text-align: center;
+  width: 50px;
+  height: 34px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -25px;
+  background: #38424F ;
+}
+.icon-user, .icon-lock {
+ padding-top: 16px;
+ font-size: 16px;
+}
+#password {
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -90px;
+  margin-top: -10px;
+}
+#login-button {
+  color: #FFF;
+  text-align: center;
+  padding-top: 10px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -35px;
+  background: #F0793F ;
+ box-shadow: 0px 0px 2px 2px #363840 ;
+}
+#login-button:hover {
+ background: #EA5912 ;
+ cursor: pointer;
+}
+#forget {
+  text-align: center;
+  color: #464D56 ;
+  padding-top: 30px;
+  width: 300px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%; 
+  margin-left: -150px;
+  margin-top: -15px;
+}
