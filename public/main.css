@@ -68,7 +68,6 @@
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
   background-color: rgba(255,255,255,0.5) !important;
-  color: white !important;
 }
 a.dropdown-toggle:hover {
   color: white;
@@ -194,7 +193,7 @@ background-color: rgba(0,15,0,0.9);
  display: inline;
  width: 200px;
  padding: 8px;
- color: #fff;
+ color: black;
  -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb ), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00 )) 21 30 30 21 repeat repeat;
  text-align: center;
  outline: none;
@@ -202,15 +201,15 @@ background-color: rgba(0,15,0,0.9);
  background-color: rgba(220,215,200,0.4);
  margin-right: 25px;
  margin-left: 25px;
- font-size: 20px;
+ font-size: 1em;
  margin-left: 16%; 
 }
+
 #searching {
  margin-left: 16%;
  width: 200px;
  margin-bottom: 5px;
  padding: auto;
- color: green;
 
 }
 
