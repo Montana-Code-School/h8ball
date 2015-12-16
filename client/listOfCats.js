@@ -81,7 +81,7 @@ var App = React.createClass({
         return (
         <div>
           <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
-            <nav className="navbar navbar-default navbar-fixed-top" role="navigation">
+            <nav id="mainPageNav" className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container-fluid">
                 <div className="navbar-header">
                   <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
@@ -105,9 +105,6 @@ var App = React.createClass({
                         <ul className="dropdown-menu" id="preMade">
                           <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
                         </ul>
-                    </li>
-                    <li className="dropdown"> 
-                      <a href="about.html">ABOUT</a>
                     </li>
                   </ul>
                 </div>

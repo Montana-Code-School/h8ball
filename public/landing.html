@@ -11,16 +11,36 @@
 <body>
 
 <!-- ******** START NAVIGATION *********** -->
+<section id="nightSky">
+<nav id="landingNav" class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/landing.html" style="font-size: 32px;">MAGIC 8 BALL</a>
+    </div>
 
-
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html" style="font-size: 24px;">SIGN IN</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <!-- ******* FIRST LANDING PAGE SECTION **** -->
 
-  <section id="nightSky">
+  
 	<div class="container-fluid">
 	<div class="container-fluid col-md-6">
 		<img id="landing8" src="img/8ball.png" alt="8 Ball" style="height: 100%; width: 100%">
 	</div>
-	<div id="heading" class="container-fluid text-center col-md-6">
+	<div id="heading" class="container-fluid text-center col-md-5">
      	<h1 style="text-align: center; font-size: 60px; color: white; font-family: 'Yanone Kaffeesatz', sans-serif;">THE MAGIC 8 BALL ENGINE</h1>
      	<div class="container-fluid text-center">
         	<a href="/"> <button class="ghost-button">Make your own</button></a>
@@ -103,5 +123,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 <script src="./static/home.js"></script>
 <script type="text/javascript"></script>
+<script>
+(function ($) {
+  $(document).ready(function(){
+
+    // hide .navbar first
+    $(".navbar").hide();
+
+    // fade in .navbar
+    $(function () {
+        $(window).scroll(function () {
+
+                 // set distance user needs to scroll before we start fadeIn
+            if ($(this).scrollTop() > 100) {
+                $('.navbar').fadeIn();
+            } else {
+                $('.navbar').fadeOut();
+            }
+        });
+    });
+
+});
+  }(jQuery));
+</script>
+
 </body>
 </html>
