@@ -15,10 +15,12 @@ session         = require('express-session'),
 morgan          = require('morgan'),
 cookieParser    = require('cookie-parser'),
 db              = require('./model/db'),
+user            = require('./model/user'),
 Joke            = require('./model/joke'),
 Cat             = require('./model/cat'),
 // Bubble          = require('./model/catBubble'),
 jokeRoutes      = require('./routes/jokeRoutes'),
+userRoutes      = require('./routes/userRoutes'),
 ballRoutes      = require('./routes/ballRoutes');
 // catBubbleRoutes = require('./routes/catBubbleRoutes');
 
@@ -87,9 +89,13 @@ app.use(flash()); // use connect-flash for flash messages stored in session
  
 
 // routes ======================================================================
+app.use(session({secret:'ilovegoats'}));
+app.use(passport.initialize());
+app.use(passport.session());
 
+require('./routes/userRoutes.js')(app, passport);
 
-
+require('./config/passport')(passport);
 
 app.use('/api/ball',ballRoutes);
 app.use('/api/jokes',jokeRoutes);
