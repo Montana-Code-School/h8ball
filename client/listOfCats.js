@@ -98,7 +98,7 @@ var App = React.createClass({
                     <span className="icon-bar"></span>
                     <span className="icon-bar"></span>
                   </button>
-                  <a className="navbar-brand" id="brand" href="/landing.html">MAGIC 8 BALL</a>
+                  <a className="navbar-brand" id="brand" href="/">MAGIC 8 BALL</a>
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-right">

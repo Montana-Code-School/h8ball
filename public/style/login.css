@@ -65,16 +65,14 @@ h1{
 }
 /********** SPARKLES ***********/
 
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900|Montez);
+
+$buttonBackground: #2c3e50;
+$buttonColor: rgba(255,255,255,1);
+
 .sparkley {
 
-  padding: 16px 36px;
-  font-weight: normal;
-  
-  border-radius: 3px;
   transition: all 0.25s ease;
-  
-  box-shadow: 0 38px 32px -25px black;
-  margin: 0 1em 1em;
   
   &:hover {
     background: $buttonBackground;
