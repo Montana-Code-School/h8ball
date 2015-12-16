@@ -3,6 +3,8 @@ $(function() {
   
   // // default is varying levels of transparent white sparkles
   $(".face").sparkleh();
+  $(".btn").sparkleh();
+  // $("#landingNav").sparkleh();
   
   // rainbow as a color generates random rainbow colros
   // count determines number of sparkles
@@ -19,7 +21,7 @@ $(function() {
     color: "rainbow",
     overlap: 10
   });
-  
+ 
   
   
   // $(".face").sparkleh({
