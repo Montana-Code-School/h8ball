@@ -13,6 +13,10 @@
     margin-top: 0;
 }
 
+#landingNav{
+  background-color: rgba(0,0,555,0.1);
+}
+
 #landing8{
   /*margin-right: 200px;*/
 }
@@ -156,11 +160,35 @@ img.resize{
 
 }
 #preMade{
- font-family: 'Yanone Kaffeesatz', sans-serif;
- width: 700px;
- background-color: rgba(255,255,200,1);
- 
+font-family: 'Yanone Kaffeesatz', sans-serif;
+width: 300px;
+background-color: rgba(0,15,0,0.9);
+
 }
+#preMade button {
+ display: inline;
+ width: 200px;
+ padding: 8px;
+ color: #fff;
+ -webkit-border-image: -webkit-gradient(linear, left top, left bottom, from(#00abeb ), to(#fff), color-stop(0.5, #fff), color-stop(0.5, #66cc00 )) 21 30 30 21 repeat repeat;
+ text-align: center;
+ outline: none;
+ text-decoration: none;
+ background-color: rgba(220,215,200,0.4);
+ margin-right: 25px;
+ margin-left: 25px;
+ font-size: 20px;
+ margin-left: 16%; 
+}
+#searching {
+ margin-left: 16%;
+ width: 200px;
+ margin-bottom: 5px;
+ padding: auto;
+ color: green;
+
+}
+
 
 /*****************************ABOUT PAGE********************************/
 
