@@ -100,13 +100,24 @@ a {
 }
 
 #whiteBub { 
-  position: absolute;
+  position: fixed;
   text-align: center;
-  color: hotpink;
-  font-size: 1.8em;
-  top: 30%;
+  border: solid 1px black;
+  background-color: rgba(255,255,255, 0.7);
+  padding: 20px;
+  border-radius: 5%;
+  color: black;
+  font-size: 1.5em;
+  top: 25%;
   right: 15%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
+  width: 220px;
+  height: 90px;
+  box-shadow: 2px 2px 4px 2px black;
+}
+.bub h2 {
+  margin: 2px;
+  padding: 1px;
 }
 
 /**************************Ball Size and Position and Words****************************/
