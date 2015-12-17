@@ -7,7 +7,7 @@ var CatBub = React.createClass({
     if(this.props.name){
 		var name = this.props.name
 	} else {
-		var name = "Click on the ball to reveal the Answer"
+		var name = "Select a category then click on the ball."
 	}
         return (
 				<div id="whiteBub">

@@ -178,7 +178,7 @@ figure {
 
 
 /* Behaviors =================================================== */  
-    .hungry .mouth { animation:hungry .5s infinite; border-radius:30px 30px 50% 50%; height:80px; }
+    .hungry .mouth { animation:hungry 1s infinite; border-radius:30px 30px 50% 50%; height:80px; }
     .hungry .mouth:hover { cursor:none; }
         @keyframes hungry { 40%{ height:40px; } }
     
