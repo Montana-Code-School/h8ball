@@ -52,9 +52,13 @@ router.route('/cat/justone/:cat_id')
  .get(function(req, res){
      mongoose.model("Cat").findById(req.params.cat_id)
      .populate('jokes').exec(function(err, cat){
-         if(err)
+         if(err){
            res.send("You didn't a random joke");
-         res.json(magicBall(cat.jokes[0].joke));
+         }else {
+          var temp = (cat.jokes && cat.jokes.length > 0) ? cat.jokes[0].joke : [];
+
+         res.json(magicBall(temp));
+       }
       })
   })
 

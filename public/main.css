@@ -100,24 +100,26 @@ a {
 }
 
 #whiteBub { 
-  position: fixed;
-  text-align: center;
-  border: solid 1px black;
-  background-color: rgba(255,255,255, 0.7);
-  padding: 20px;
-  border-radius: 5%;
-  color: black;
-  font-size: 1.5em;
-  top: 10%;
-  left: 3%;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  width: 220px;
-  height: 90px;
-  box-shadow: 2px 2px 4px 2px black;
+ position: fixed;
+ text-align: center;
+ border: solid 1px black;
+ background-color: rgba(255,255,255, 0.7);
+ padding: 20px;
+ border-radius: 5%;
+ color: black;
+ font-size: 1.5em;
+ top: 10%;
+ left: 3%;
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ width: 220px;
+ height: 90px;
+ box-shadow: 2px 2px 4px 2px black;
+
+
 }
 .bub h2 {
-  margin: 2px;
-  padding: 1px;
+ margin: 2px;
+ padding: 1px;
 }
 
 /**************************Ball Size and Position and Words****************************/
@@ -179,6 +181,9 @@ width: 100%;
 color: black;
 margin-bottom: -20px;
 background-color: rgba(0,0,0,0.7);
+}
+#signIn {
+  color: white;
 }
 
 

@@ -66,10 +66,10 @@ router.route('/cats')
 //returns current user
 router.route('/currentUser')
   .get(function(req, res){
-    console.log("I found the user");
     if(req.user){
+    console.log("I found the user");
     mongoose.model('User').find({
-      user: req.user._id
+      _id: req.user._id
     }, function(err, user){
       console.log(user)
       if(err)
