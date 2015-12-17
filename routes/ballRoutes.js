@@ -21,9 +21,9 @@ router.use(function(req, res, next) {
 //Route to get all jokes where user id = req.user._id
 router.route('/user/jokes')
   .get(function(req, res){
-    console.log("getting all user balls", req.user)
+    var uID = req.user ? req.user._id : '56688fe13376877f0990f7bd';
     mongoose.model('Cat').find({
-      user: req.user._id || '56688fe13376877f0990f7bd'
+      user: uID
     },function(err, cat){
       console.log(cat)
       if(err)
