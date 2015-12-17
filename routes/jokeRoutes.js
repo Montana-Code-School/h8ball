@@ -54,8 +54,8 @@ router.route('/cat/justone/:cat_id')
      .populate('jokes').exec(function(err, cat){
          if(err){
            res.send("You didn't a random joke");
-         }else {
-          var temp = (cat.jokes && cat.jokes.length > 0) ? cat.jokes[0].joke : [];
+         } else {
+          var temp = (cat && cat.jokes && cat.jokes.length > 0) ? cat.jokes[0].joke : [''];
 
          res.json(magicBall(temp));
        }
