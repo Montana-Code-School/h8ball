@@ -56,14 +56,7 @@
  background-repeat: no-repeat;
  background-attachment: fixed;
 }
-/*.rainbow {
- 
- background: linear-gradient(to right, springgreen, gold, magenta);
-  background-color: rgba(0,0,0,0.7);
- color:transparent;
- -webkit-background-clip: text;
- background-clip: text;
-}*/
+
 /**********************Nav Bar*************************/
 
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {

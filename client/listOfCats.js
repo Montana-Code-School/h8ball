@@ -134,7 +134,7 @@ var App = React.createClass({
                     </li>
                     <li className="dropdown">
                     <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MINE<span className="caret"></span></a>
-                      <ul>
+                      <ul className="dropdown-menu" id="preMade">
                         <MyCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.myCats} />
                       </ul>
                     </li>
@@ -197,8 +197,7 @@ var MyCategories = React.createClass({
     })
         return (
             <div>
-                <input type="text" placeholder="Search Categories" id="searching" ref="search"/>
-                <button className="button" onClick={self.props.searchCats}>Search</button>
+                
                 {cat}
             </div>
         );
