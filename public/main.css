@@ -176,7 +176,10 @@ background-color: rgba(0,0,0,0.7);
 #preMade{
 font-family: 'Yanone Kaffeesatz', sans-serif;
 width: 300px;
+height: 400px;
 background-color: rgba(0,15,0,0.9);
+overflow: hidden;
+overflow-y: auto;
 
 }
 
