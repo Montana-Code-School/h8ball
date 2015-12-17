@@ -88,7 +88,7 @@ var App = React.createClass({
     render: function() {
         return (
         <div>
-          <img src="/img/catlazereyes.png" id="idx-img" alt="cat lazer eyes"/>
+          <img src="/img/catlazereyes2.png" id="idx-img" alt="cat lazer eyes"/>
             <nav id="mainPageNav" className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container-fluid">
                 <div className="navbar-header">
@@ -129,8 +129,13 @@ var App = React.createClass({
                  <img className="resize" id="8ball" src="img/8ball.png" />
                </div>
              </div>
-             <div className="col-xs-4">
-              <CatBub name={this.state.activeCat} />
+             <div className="col-xs-3">
+              <div className="bub">
+                <div className="catWords">
+                  <CatBub name={this.state.activeCat} />
+                </div>
+                <img id="chatBub" className="resize" src="img/chatbubble.png" />
+              </div>
              </div>
             </div>
         </div>

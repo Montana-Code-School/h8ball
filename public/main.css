@@ -111,10 +111,18 @@ a {
 #brand {
  font-family: 'Yanone Kaffeesatz', sans-serif;
  font-size: 32px;
- /*background-color: black;*/
  color: white;
  border-style: none;
+}
 
+#whiteBub { 
+  position: absolute;
+  text-align: center;
+  color: hotpink;
+  font-size: 1.8em;
+  top: 30%;
+  right: 15%;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 /**************************Ball Size and Position and Words****************************/
@@ -131,8 +139,6 @@ a {
  right: 30%;
  color: white;
  font-family: 'Yanone Kaffeesatz', sans-serif;
- -webkit-animation:fade-in 3s;
- -webkit-animation-delay:0.9s;
 }
 #8ball {
  z-index: -1;
