@@ -108,8 +108,8 @@ a {
   border-radius: 5%;
   color: black;
   font-size: 1.5em;
-  top: 25%;
-  right: 15%;
+  top: 10%;
+  left: 3%;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   width: 220px;
   height: 90px;
@@ -177,7 +177,7 @@ font-weight: bold;
 height: 100%;
 width: 100%;
 color: black;
-margin-bottom: -5px;
+margin-bottom: -20px;
 background-color: rgba(0,0,0,0.7);
 }
 

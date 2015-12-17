@@ -3,11 +3,9 @@ var CatBub = require('./catBubble');
 
 var App = React.createClass({
     getInitialState: function(){
-<<<<<<< HEAD
-        return { catId: '5671d47b2465b903007048fc', jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
-=======
-        return { catId: '567079df8cb57f1b857e2155', user: [], jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
->>>>>>> 28acbd5d9f2c83259fcb5cde699377103241e75d
+
+        return { catId: '', jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
+
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
