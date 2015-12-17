@@ -3,7 +3,7 @@ var CatBub = require('./catBubble');
 
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '567079df8cb57f1b857e2155', jokeData:[], activeCat: '', allCats: [], liked: false}
+        return { catId: '567079df8cb57f1b857e2155', jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
@@ -18,6 +18,23 @@ var App = React.createClass({
           success:function(data){
             console.log("inside success of loadCatsFromServer" + data)
             this.setState({allCats:data});
+          }.bind(this),
+          error: function(xhr,status, err){
+            console.log("broken url is " + this.props.url)
+            console.error(this.props.url, status,err.toString());
+          }.bind(this)
+        });
+  },
+  loadmyCatsFromServer: function() {
+      var url = "/api/ball/user/jokes";
+      var self = this
+        $.ajax({
+          url: url,
+          dataType: 'json',
+          cache:false,
+          success:function(data){
+            console.log("inside success of loadCatsFromServer" + data)
+            this.setState({myCats:data});
           }.bind(this),
           error: function(xhr,status, err){
             console.log("broken url is " + this.props.url)
@@ -84,6 +101,7 @@ var App = React.createClass({
     componentDidMount: function(){
         this.loadCatsFromServer();
         this.loadJokesFromServer();
+        this.loadmyCatsFromServer();
     },
     render: function() {
         return (
@@ -114,6 +132,12 @@ var App = React.createClass({
                           <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
                         </ul>
                     </li>
+                    <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MINE<span className="caret"></span></a>
+                      <ul>
+                        <MyCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.myCats} />
+                      </ul>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -141,6 +165,24 @@ var App = React.createClass({
 
 
 var AllCategories = React.createClass({
+    render: function() {
+        var self = this; 
+        var cat = this.props.data.map(function(c){
+            return (
+                <h2> <button onClick={self.props.loadNewCats.bind(this, c._id)}>{c.name}</button> </h2>
+                ) 
+    })
+        return (
+            <div>
+                <input type="text" placeholder="Search Categories" id="searching" ref="search"/>
+                <button className="button" onClick={self.props.searchCats}>Search</button>
+                {cat}
+            </div>
+        );
+    }
+});
+
+var MyCategories = React.createClass({
     render: function() {
         var self = this; 
         var cat = this.props.data.map(function(c){
@@ -202,7 +244,7 @@ var NewBall = React.createClass({
                       type: 'POST',
                         success:function(data){
                           console.log(data);
-                          document.location = 'index.html'
+                          document.location = 'main.html'
                         }.bind(this),
                         error: function(err){
                           console.log(err);

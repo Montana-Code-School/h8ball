@@ -5,16 +5,39 @@ var bodyParser = require('body-parser');
 
 router.use(bodyParser.urlencoded({ extended: true }))
 
+
+function isLoggedIn(req, res, next){
+  console.log('is logged in is being called')
+  if(req.isAuthenticated())
+    return next();
+  res.redirect('/');
+}
+
 router.use(function(req, res, next) {
  console.log('At least something is happening');
  next();
 })
 
+//Route to get all jokes where user id = req.user._id
+router.route('/user/jokes')
+  .get(function(req, res){
+    console.log("getting all user balls", req.user)
+    mongoose.model('Cat').find({
+      user: req.user._id || '56688fe13376877f0990f7bd'
+    },function(err, cat){
+      console.log(cat)
+      if(err)
+        res.send(err)
+      res.json(cat)
+    })
+  })
+
 router.route('/cat')
    .post(function(req, res){
-       console.log("Ball not created")
+       console.log("about to create ball", req.user)
        mongoose.model('Cat').create({
-           name: req.body.name
+           name: req.body.name,
+           user: req.user._id
 
        }, function(err, cat){
            console.log("ball", cat);
@@ -29,7 +52,7 @@ router.route('/cats')
 .get(function(req, res) {
  console.log("I found some cats");
   mongoose.model('Cat').find({})
-  .populate('jokes').exec(function(err, cat){
+  .populate('jokes').populate('user').exec(function(err, cat){
     if(err){
       return console.log(err);
     } else {
