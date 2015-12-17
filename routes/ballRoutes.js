@@ -61,6 +61,33 @@ router.route('/cats')
   });
 })
 
+
+//API/BALL/currentUser
+//returns current user
+router.route('/currentUser')
+  .get(function(req, res){
+    console.log("I found the user");
+    if(req.user){
+    mongoose.model('User').find({
+      user: req.user._id
+    }, function(err, user){
+      console.log(user)
+      if(err)
+        res.send(err)
+      res.json(user)
+    })
+    } else {
+      res.json({user: 'anonymous'})
+    }
+
+  })
+
+  //mongoogose model find USER
+  // user : req.user
+  //res user
+
+
+
 router.route('/cat/:cat_id')
 // GET JOKE BY ID
   .get(function(req, res){

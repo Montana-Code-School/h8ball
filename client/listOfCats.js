@@ -3,7 +3,11 @@ var CatBub = require('./catBubble');
 
 var App = React.createClass({
     getInitialState: function(){
+<<<<<<< HEAD
         return { catId: '5671d47b2465b903007048fc', jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
+=======
+        return { catId: '567079df8cb57f1b857e2155', user: [], jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
+>>>>>>> 28acbd5d9f2c83259fcb5cde699377103241e75d
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
@@ -60,6 +64,27 @@ var App = React.createClass({
         });
   },
 
+
+  // loadUserFromServer
+  // ajax to ball/api/currentUser
+  // set state of user to user
+  loadUserFromServer: function(){
+    var url = "/api/ball/current/user";
+    var self = this
+      $.ajax({
+        url: url,
+        dataType: 'json',
+        cache: false,
+        success: function(data){
+          console.log('The user is on' + data)
+          this.setState({user: data})
+        }.bind(this),
+        error: function(xhr, status, err){
+          console.log("broken url is " + url)
+          console.log(url, status,err.toString());
+        }.bind(this)
+      });
+  },
 
   loadNewCats: function(id){
     var id = id;
@@ -185,6 +210,13 @@ var AllCategories = React.createClass({
 });
 
 var MyCategories = React.createClass({
+
+
+  // if(user){
+
+  // }
+  // this.data.user
+
     render: function() {
         var self = this; 
         var cat = this.props.data.map(function(c){
