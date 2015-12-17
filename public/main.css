@@ -2,51 +2,47 @@
  font-family: 'Yanone Kaffeesatz', sans-serif;
  list-style: none;
 }
-
 #nightSky{
-    background-image: url("img/nightSky.jpeg");
-    background-size:     cover;                      
-    background-repeat:   no-repeat;
-    background-position: center center;
-    height: 800px;
-    width: 100%;
-    margin-top: 0;
+ background-image: url("img/nightSky.jpeg");
+ background-size:     cover;                      
+ background-repeat:   no-repeat;
+ background-position: center center;
+ height: 800px;
+ width: 100%;
+ margin-top: 0;
 }
-
 #landing8{
-  padding-right: 0;
-  margin-left: 50px;
-  margin-top: 50px;
+ padding-right: 0;
+ margin-left: 50px;
+ margin-top: 50px;
 }
 #heading{
-/*  margin-right: 75px;*/
-  margin-left: 50px;
-  margin-top: 200px;
+ margin-left: 50px;
+ margin-top: 200px;
 }
-.ghost-button {
-  display: inline-block;
-  width: 200px;
-  padding: 8px;
-  color: #fff;
-  border: 1px solid #fff;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  background: transparent;
-  margin-right: 25px;
-  margin-left: 25px;
-  font-size: 20px;
+.ghost-button{
+ display: inline-block;
+ width: 200px;
+ padding: 8px;
+ color: #fff;
+ border: 1px solid #fff;
+ text-align: center;
+ outline: none;
+ text-decoration: none;
+ background: transparent;
+ margin-right: 25px;
+ margin-left: 25px;
+ font-size: 20px;
 }
-
 #section2{
-  margin-top: 75px;
-  margin-bottom: 75px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  min-height: 100%;
-  width: 100%;
-  text-align: center;
-  align: center;
+ margin-top: 75px;
+ margin-bottom: 75px;
+ padding-top: 50px;
+ padding-bottom: 50px;
+ min-height: 100%;
+ width: 100%;
+ text-align: center;
+ align: center;
 }
 #idx-img{
  width: 100%;
@@ -58,48 +54,54 @@
 }
 
 /**********************Nav Bar*************************/
-
-.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
-  background-color: rgba(255,255,255,0.5) !important;
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+ background-color: rgba(255,255,255,0.5) !important;
 }
-a.dropdown-toggle:hover {
-  color: white;
-  background-color: black;
+a.dropdown-toggle:hover{
+ color: white;
+ background-color: black;
 }
 a.dropdown-toggle{
-  color: white !important;
+ color: white !important;
 }
-
+#startingNav{
+ background-color: rgba(0,0,0,0);
+ border: none;
+ border-style: none;
+ color: white;
+}
+#landingNav a{
+ color: white;
+}
 #landingNav{
-  background-color: rgba(255,255,255,.8);
-  border: none;
-  border-style: none;
-  color: white;
+ background-color: rgba(255,255,255,.8);
+ border: none;
+ border-style: none;
+ color: white;
 }
 #mainPageNav{
-  background-color: rgba(255,255,255,0.1);
-  border: none;
-  border-style: none;
-  color: white !important;
-  position: fixed;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 24px;
+ background-color: rgba(255,255,255,0.1);
+ border: none;
+ border-style: none;
+ color: white !important;
+ position: fixed;
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ font-size: 24px;
 }
 
-.navbar li { color: #000 } 
-
+.navbar li{ 
+ color: #000 
+} 
 a {
-  color: white;
+ color: white;
 }
-
-#brand {
+#brand{
  font-family: 'Yanone Kaffeesatz', sans-serif;
  font-size: 32px;
  color: white;
  border-style: none;
 }
-
-#whiteBub { 
+#whiteBub{ 
  position: fixed;
  text-align: center;
  border: solid 1px black;
@@ -114,10 +116,14 @@ a {
  width: 220px;
  height: 90px;
  box-shadow: 2px 2px 4px 2px black;
-
-
 }
-.bub h2 {
+#sign-in{
+ font-size: 10rem;
+ color: white;
+ padding: 0;
+ margin: 0;
+}
+.bub h2{
  margin: 2px;
  padding: 1px;
 }
@@ -130,30 +136,27 @@ a {
  text-align: center;
  font-size:2em;
 }
-#words {
+#words{
  position: absolute;
  top: 70%;
  right: 30%;
  color: white;
  font-family: 'Yanone Kaffeesatz', sans-serif;
 }
-#8ball {
+#8ball{
  z-index: -1;
-
 }
 img.resize{
-  max-width: 100%;
-  max-height: 100%;
-  margin-left: 250px;
-  margin-top: 100px;
+ max-width: 100%;
+ max-height: 100%;
+ margin-left: 250px;
+ margin-top: 100px;
 }
 
 /*****************Make New Ball **********************************/
-
 .makeJoke{
  width: 400px;
  background-color: rgba(0,0,0,0.7);
- 
 }
 #catForm, #jokeForm{
  font-size: 1.7em;
@@ -162,7 +165,6 @@ img.resize{
  text-shadow: 0px 0px 1px rgba(0, 255, 105, 0.64);
 
 }
-
 #formHead{
  text-align: center;
  font-size: 2em;
@@ -171,21 +173,19 @@ img.resize{
  margin-bottom: 0;
  background: linear-gradient(to right, springgreen, gold, magenta);
 }
-
 #makeBallButton {
-background: linear-gradient(to right, springgreen, gold, magenta);
-font-size: 1.9em;
-font-weight: bold;
-height: 100%;
-width: 100%;
-color: black;
-margin-bottom: -20px;
-background-color: rgba(0,0,0,0.7);
+ background: linear-gradient(to right, springgreen, gold, magenta);
+ font-size: 1.9em;
+ font-weight: bold;
+ height: 100%;
+ width: 100%;
+ color: black;
+ margin-bottom: -20px;
+ background-color: rgba(0,0,0,0.7);
 }
-#signIn {
+#signIn{
   color: white;
 }
-
 
 /************* CATEGORIES ****************/
 #preMade{
@@ -197,8 +197,7 @@ overflow: hidden;
 overflow-y: auto;
 
 }
-
-#preMade button {
+#preMade button{
  display: inline;
  width: 200px;
  padding: 8px;
@@ -214,18 +213,14 @@ overflow-y: auto;
  background: linear-gradient(to right, springgreen, gold, magenta);
  margin-left: 16%; 
 }
-
-#searching {
+#searching{
  margin-left: 16%;
  width: 200px;
  margin-bottom: 5px;
  padding: auto;
-
 }
 
-
 /*****************************ABOUT PAGE********************************/
-
 #profiles{
  margin-left: auto;
  margin-right: auto;
@@ -235,42 +230,33 @@ overflow-y: auto;
  background-color: #fefdfb   ;
 }
 /****************************About Dev's heading*****************************/
-.heading {
-color:white;
+.heading{
+ color:white;
 }
 .title{
-  color: white;
+ color: white;
 }
-.heading:hover {
-color:pink;
+.heading:hover{
+ color:pink;
 }
-
-
 #profileDiv{
-  background: rgba(0, 0, 0, .85);
-    height: 75%;
-    width: 100%;
-    margin-top: 0;
-    color: white;
+ background: rgba(0, 0, 0, .85);
+ height: 75%;
+ width: 100%;
+ margin-top: 0;
+ color: white;
 }
 
 /********** SPARKLES ***********/
-
-.sparkley {
-
-  padding: 16px 36px;
-  font-weight: normal;
-  
-  border-radius: 3px;
-  transition: all 0.25s ease;
-  
-  box-shadow: 0 38px 32px -25px black;
-  margin: 0 1em 1em;
-  
+.sparkley{ 
+ padding: 16px 36px;
+ font-weight: normal; 
+ border-radius: 3px;
+ transition: all 0.25s ease;
+ box-shadow: 0 38px 32px -25px black;
+ margin: 0 1em 1em;
   &:hover {
     background: $buttonBackground;
     color: transparentize( $buttonColor,0.8 );
-    
   }
-  
 }

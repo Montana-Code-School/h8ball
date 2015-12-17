@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">	
-	<link rel="stylesheet" type="text/css" href="main.css">
+ <head>
+  <meta charset="utf-8">	
+  <link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style/creatures.css">
-  <link href="userRoutes.js">
-  
-</head>
-<body>
+  <link href="userRoutes.js"> 
+ </head>
+ <body>
 
 <!-- ******** START NAVIGATION *********** -->
-<section id="nightSky">
-<nav id="landingNav" class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
+ <section id="nightSky">
+<!-- ******** STARTING NAV ********** -->
+   <nav id="startingNav" class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
+    <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/login" style="font-size: 24px;">SIGN IN</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+<!-- ******** SCROLLING NAV *********-->
+ <nav id="landingNav" class="navbar navbar-default navbar-fixed-top" id="nav" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -32,43 +54,41 @@
         <li><a href="/login" style="font-size: 24px;">SIGN IN</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+   </div><!-- /.container-fluid -->
+ </nav>
 <!-- ******* FIRST LANDING PAGE SECTION **** -->
 
   
 	<div class="container-fluid">
-	<div class="container-fluid col-md-6">
+	 <div class="container-fluid col-md-6">
 		<img id="landing8" src="img/8ball.png" alt="8 Ball" style="height: 100%; width: 100%">
-	</div>
+	 </div>
 	<div id="heading" class="container-fluid text-center col-md-5">
-     	<h1 style="text-align: center; font-size: 60px; color: white; font-family: 'Yanone Kaffeesatz', sans-serif;">THE MAGIC 8 BALL ENGINE</h1>
-     	<div class="container-fluid text-center">
-        	<a href="/login"> <button class="ghost-button sparkley">Make your own</button></a>
-        	<a href="/main.html"> <button class="ghost-button sparkley">Borrow ours</button></a>
-        	</div>
-        </div>
-      </div>
-    </section>
+   <h1 style="text-align: center; font-size: 60px; color: white; font-family: 'Yanone Kaffeesatz', sans-serif;">THE MAGIC 8 BALL ENGINE</h1>
+    <div class="container-fluid text-center">
+     <a href="/login"> <button class="ghost-button sparkley">Make your own</button></a>
+     <a href="/main.html"> <button class="ghost-button sparkley">Borrow ours</button></a>
+    </div>
+   </div>
+  </div>
+ </section>
 
 <!-- ******* 2nd LANDING PAGE SECTION **** -->  
 
   <div id="section2" class="container-fluid col-md-12">
      <p style="font-size: 24px; text-align: center; font-family: 'Yanone Kaffeesatz', sans-serif;"> Developed by three Montana Code School students, Magic 8 Ball is a create-your-own-adventure template for the classic fortune telling game of the 1950's. </p>
-      <p style="font-size: 24px; text-align: center; font-family: 'Yanone Kaffeesatz', sans-serif;">Using a sophisticated randomizing algorithm and well-designed database schema, you can create and store your own personalized categories and jokes.</p>
-      <p style="font-size: 24px; text-align: center; font-family: 'Yanone Kaffeesatz', sans-serif;"> Magic 8 Ball was developed on the "MERN" stack: MongoDB, Express.js, React.js and Node.js. </p>
-      
+     <p style="font-size: 24px; text-align: center; font-family: 'Yanone Kaffeesatz', sans-serif;">Using a sophisticated randomizing algorithm and well-designed database schema, you can create and store your own personalized categories and jokes.</p>
+     <p style="font-size: 24px; text-align: center; font-family: 'Yanone Kaffeesatz', sans-serif;"> Magic 8 Ball was developed on the "MERN" stack: MongoDB, Express.js, React.js and Node.js. </p>
   </div>  
  	<hr>
  <!-- ********** 3rd LANDING PAGE SECTION ********** -->  
 
-<div id="profileDiv" class="container-fluid col-md-12">
-    <br>
-      <h1 class="name">ABOUT THE DEVELOPERS</h1>
-  <div>
-  <ul class="creatures" id="creatures" style="font-family: 'Yanone Kaffeesatz', sans-serif;">
-
-    <li class="face">
+ <div id="profileDiv" class="container-fluid col-md-12">
+ <br>
+  <h1 class="name">ABOUT THE DEVELOPERS</h1>
+   <div>
+    <ul class="creatures" id="creatures" style="font-family: 'Yanone Kaffeesatz', sans-serif;">
+     <li class="face">
       <div class="click-anim">
         <figure style="background-color:#52303E">
           <div class="eye"></div>
@@ -76,43 +96,43 @@
           <div class="moustache"></div>
           <div class="mouth"></div>
         </figure>
-        </div>
+      </div>
       <div class="shadow"></div>
-      <a href="http://www.linkedin.com/in/davislog" class="heading"><h2>DAVIS LOGAN</h2></a>
-      <h3 class="title">"Method Overide Expert"</h3>
-    </li>
+       <a href="http://www.linkedin.com/in/davislog" class="heading"><h2>DAVIS LOGAN</h2></a>
+        <h3 class="title">"Method Overide Expert"</h3>
+     </li>
 
-    <li class="face">
-    <div class="click-anim">
-      <figure class="hungry" style="background-color:#E67446">
+     <li class="face">
+      <div class="click-anim">
+       <figure class="hungry" style="background-color:#E67446">
         <div class="eye"></div>
         <div class="eye"></div>
         <div class="mouth tooth"></div>
-      </figure>
-    </div>
-    <div class="shadow"></div>
-    <a href="http://www.linkedin.com/in/david-white-52828497" class="heading"><h2>DAVE WHITE</h2></a>
-    <h3 class="title">"Always Sunny Officer"</h3>
-  </li>
+       </figure>
+      </div>
+      <div class="shadow"></div>
+       <a href="http://www.linkedin.com/in/david-white-52828497" class="heading"><h2>DAVE WHITE</h2></a>
+        <h3 class="title">"Always Sunny Officer"</h3>
+     </li>
   
-  <li class="face">
-    <div class="click-anim">
-      <figure class="hyper" style="background-color: #9F5351">
+     <li class="face">
+      <div class="click-anim">
+       <figure class="hyper" style="background-color: #9F5351">
         <div class="eye"></div>
         <div class="eye"></div>
         <div class="mouth"></div>
-      </figure>
-    </div>
-    <div class="shadow"></div>
-    <a href="http://www.linkedin.com/in/bethdianethomas" class="heading"><h2>BETH THOMAS</h2></a>
-    <h3 class="title">"Chief Cookie Monster"</h3>
-  </li>
-</ul>
-</div>
-</div>
-<br>
-<br>
-<hr>
+       </figure>
+      </div>
+      <div class="shadow"></div>
+       <a href="http://www.linkedin.com/in/bethdianethomas" class="heading"><h2>BETH THOMAS</h2></a>
+        <h3 class="title">"Chief Cookie Monster"</h3>
+     </li>
+    </ul>
+  </div>
+ </div>
+ <br>
+ <br>
+ <hr>
 
   <!-- ********** 4th LANDING PAGE SECTION ********** -->
 
@@ -128,26 +148,24 @@
 <script>
 (function ($) {
   $(document).ready(function(){
-
     // hide .navbar first
-    $(".navbar").hide();
-
+    $('#landingNav').hide();
+    $('#startingNav').show();
     // fade in .navbar
     $(function () {
         $(window).scroll(function () {
-
+            $("#startingNav").hide();
                  // set distance user needs to scroll before we start fadeIn
             if ($(this).scrollTop() > 100) {
-                $('.navbar').fadeIn();
+                $('#landingNav').fadeIn();
             } else {
-                $('.navbar').fadeOut();
+                $('#landingNav').fadeOut();
+                $('#startingNav').show();  
             }
         });
+      });
     });
-
-});
   }(jQuery));
-</script>
-
-</body>
+ </script>
+ </body>
 </html>
