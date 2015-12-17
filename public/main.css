@@ -1,3 +1,4 @@
+
 *{
  font-family: 'Yanone Kaffeesatz', sans-serif;
  list-style: none;
@@ -70,9 +71,7 @@ a.dropdown-toggle{
  border-style: none;
  color: white;
 }
-#landingNav a{
- color: white;
-}
+
 #landingNav{
  background-color: rgba(255,255,255,.8);
  border: none;
@@ -243,13 +242,14 @@ overflow-y: auto;
 .heading:hover{
  color:pink;
 }
-#profileDiv{
+#profileDiv.container-fluid{
  background: rgba(0, 0, 0, .85);
  height: 75%;
  width: 100%;
  margin-top: 0;
  color: white;
 }
+
 
 /********** SPARKLES ***********/
 .sparkley{ 

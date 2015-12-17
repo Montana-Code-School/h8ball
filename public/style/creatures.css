@@ -1,60 +1,81 @@
-
-.name{
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 40px;
-    color: white;
+#profileDiv.container-fluid{
+ background-color: rgba(0, 0, 0, .85);
+ height: 75%;
+ width: 100%;
+ margin-top: 0;
+ color: white;
 }
-
+.heading{
+ color:white;
+}
+.title{
+ color: white;
+}
+.heading:hover{
+ color:pink;
+}
+#profileDiv.container-fluid{
+ background: rgba(0, 0, 0, .85);
+ height: 75%;
+ width: 100%;
+ margin-top: 0;
+ color: white;
+}
+.name{
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ font-size: 40px;
+ color: white;
+}
 
 /* ***************** Start Creatures  */
-
-@font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+@font-face{
+ font-family: 'Amatic SC';
+ font-style: normal;
+ font-weight: 400;
+ src: local('Amatic SC Regular'), local('AmaticSC-Regular'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/DPPfSFKxRTXvae2bKDzp5D8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
-@font-face {
-  font-family: 'Amatic SC';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/IDnkRTPGcrSVo50UyYNK73hCUOGz7vYGh680lGh-uXM.woff) format('woff');
+@font-face{
+ font-family: 'Amatic SC';
+ font-style: normal;
+ font-weight: 700;
+ src: local('Amatic SC Bold'), local('AmaticSC-Bold'), url(http://themes.googleusercontent.com/static/fonts/amaticsc/v3/IDnkRTPGcrSVo50UyYNK73hCUOGz7vYGh680lGh-uXM.woff) format('woff');
 }
 
 /* Reset ================ */    
-* { box-sizing:border-box; }
-
-body {
-  text-align:center;
-  font:300 100%/1.5 'Amatic SC', cursive;
-  /*color:#494636;
-  background:#F8EEB9;*/
-  overflow-y:scroll;
-  overflow-x:hidden;
+*{ 
+ box-sizing:border-box; 
 }
-
-h1 { font-size:2rem; }
-        
-a { cursor:pointer; text-decoration:none; /*color:#111;*/ }
-
-    
-    
-    
+body{
+ text-align:center;
+ font:300 100%/1.5 'Amatic SC', cursive;
+ overflow-y:scroll;
+ overflow-x:hidden;
+}
+h1{ 
+ font-size:2rem; 
+}
+a{ 
+ cursor:pointer;  
+ text-decoration:none;
+}
+ 
 /* Creature container ========== */    
-.creatures { list-style:none; margin:15px 0; transition:opacity .3s; }
-    
-.creatures li {
-   display:inline-block;
-   vertical-align:top;
-   text-align:center;
-   width:260px;
-   list-style:none;
-   margin:0 auto;
-   padding:15px 30px;
-   margin: 50px;
-   user-select:none;
+.creatures{ 
+ list-style:none; 
+ margin:15px 0;
+ transition:opacity .3s;  
 }
-
+.creatures li{
+ display:inline-block;
+ vertical-align:top;
+ text-align:center;
+ width:260px;
+ list-style:none;
+ margin:0 auto;
+ padding:15px 30px;
+ margin: 50px;
+ user-select:none;
+}
 
 /* Header============================== */
     hgroup { text-align:center; white-space:nowrap; }  
