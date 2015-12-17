@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">	
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+  
+</head>
+<body>
+	
+
+<span id="app"></span>
+
+	
+	
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
+<script src="./static/home.js"></script>
+<script type="text/javascript">
+
+jQuery.fn.shake = function() {
+   this.each(function(i) {
+       $(this).css({ "position" : "absolute" });
+       for (var x = 1; x <= 3; x++) {
+           $(this).animate({ left: 35 }, 10).animate({ left: 35}, 5).animate({ left: 35 }, 10).animate({ left: 30 }, 25).animate({ top: -20 }, 10).animate({ top: 30}, 15).animate({top: 30 }, 10).animate({ top: 0, left: 0 }, 15);
+
+       }
+   });
+   return this;
+}
+
+$(".ball").click(function() {
+   $(this).shake();
+});
+    
+
+</script>
+
+</body>
+</html>

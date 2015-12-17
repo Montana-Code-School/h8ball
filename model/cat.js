@@ -3,7 +3,8 @@ var Schema = mongoose.Schema;
 
 var CatSchema = new Schema ({
    name: String,
-   jokes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Joke' }]
+   jokes: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Joke' }],
+   user: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
   
 });
 CatSchema.index({name: 'text' }, function(error) {});

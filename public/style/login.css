@@ -1,111 +1,95 @@
-body {
+*, h1 {
  font-family: 'Yanone Kaffeesatz', sans-serif;
- background: #313944 ;
- position: absolute;
- font-weight: lighter;
- color: #FFF;
- top: 0;
- right: 0;
- left: 0;
- bottom: 0;
-}
-#center {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -150px;
 }
 
-#login-row {
-  width: 300px;
-  height: 50px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -150px;
-  background: #464D56 ;
+body{
+    background: url("/img/nightSkyviews.jpeg");
+    background-size:     cover;                      
+    background-repeat:   no-repeat;
+    background-position: center center;
+    height: 800px;
+    width: 100%;
+    margin-top: 0;
 }
-#login-icon {
+
+#landingNav{
+  background-color: rgba(255,255,255,0);
+  border: none;
+  border-style: none;
+  color: white !important;
+}
+
+a{
+  color: rgba(255,255,255,0.9) !important;
+}
+
+h1, p, .fa, .form-group{
+  color: white;
+}
+
+.form-group, p{
+  font-size: 20px;
+}
+
+p{
+  text-align: right;
+}
+
+h1{
   text-align: center;
-  width: 50px;
-  height: 34px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -25px;
-  background: #38424F ;
 }
-#login {
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -90px;
-  margin-top: -10px;
-}
-#password-row {
-  width: 300px;
-  height: 50px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -98px;
-  background: #464D56 ;
-}
-#password-icon {
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: black;
+  border: 1px solid #fff;
   text-align: center;
-  width: 50px;
-  height: 34px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -25px;
-  background: #38424F ;
+  outline: none;
+  text-decoration: none;
+  background: white;
+  margin-right: 25px;
+  margin-left: 25px;
+  font-size: 20px;
 }
-.icon-user, .icon-lock {
- padding-top: 16px;
- font-size: 16px;
+
+.login{
+  float: right;
+
 }
-#password {
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -90px;
-  margin-top: -10px;
+.btn{
+  background-color: #E67446;
+  color: white;
+  font-size: 24px;
+  width: 100px;
 }
-#login-button {
-  color: #FFF;
-  text-align: center;
-  padding-top: 10px;
-  width: 300px;
-  height: 30px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -35px;
-  background: #F0793F ;
- box-shadow: 0px 0px 2px 2px #363840 ;
+/********** SPARKLES ***********/
+
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900|Montez);
+
+$buttonBackground: #2c3e50;
+$buttonColor: rgba(255,255,255,1);
+
+.sparkley {
+
+  transition: all 0.25s ease;
+  
+  &:hover {
+    background: $buttonBackground;
+    color: transparentize( $buttonColor,0.8 );
+    
+  }
+  
 }
-#login-button:hover {
- background: #EA5912 ;
- cursor: pointer;
-}
-#forget {
-  text-align: center;
-  color: #464D56 ;
-  padding-top: 30px;
-  width: 300px;
-  height: 30px;
-  position: absolute;
-  left: 50%;
-  top: 50%; 
-  margin-left: -150px;
-  margin-top: -15px;
+.landing {
+
+  transition: all 0.25s ease;
+  
+  &:hover {
+    background: $buttonBackground;
+    color: transparentize( $buttonColor,0.8 );
+    
+  }
+  
 }
