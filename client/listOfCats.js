@@ -176,10 +176,7 @@ var App = React.createClass({
              </div>
              <div className="col-xs-3">
               <div className="bub">
-                <div className="catWords">
-                  <CatBub name={this.state.activeCat} />
-                </div>
-                <img id="chatBub" className="resize" src="img/chatbubble.png" />
+                <CatBub name={this.state.activeCat} />
               </div>
              </div>
             </div>
