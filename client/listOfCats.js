@@ -219,7 +219,7 @@ var AllCategories = React.createClass({
         return (
             <div>
                 <input type="text" placeholder="Search Categories" id="searching" ref="search"/>
-                <button className="button" onClick={self.props.searchCats}>Search</button>
+                <button className="button" onClick={self.props.searchCats}><strong id="strongSearch">Search</strong></button>
                 {cat}
             </div>
         );
