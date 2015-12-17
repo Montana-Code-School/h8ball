@@ -3,7 +3,7 @@ var CatBub = require('./catBubble');
 
 var App = React.createClass({
     getInitialState: function(){
-        return { catId: '5672e913b7d340d92fb99e2f', user: [], jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
+        return { catId: '5672e913b7d340d92fb99e2f', user: 'anon', jokeData:[], activeCat: '', allCats: [], myCats: [], liked: false}
     },
     loadCatsFromServer: function(search) {
       var url = "/api/ball/cats";
@@ -65,7 +65,7 @@ var App = React.createClass({
   // ajax to ball/api/currentUser
   // set state of user to user
   loadUserFromServer: function(){
-    var url = "/api/ball/current/user";
+    var url = "/api/ball/currentUser";
     var self = this
       $.ajax({
         url: url,
@@ -73,7 +73,7 @@ var App = React.createClass({
         cache: false,
         success: function(data){
           console.log('The user is on' + data)
-          this.setState({user: data})
+          this.setState({user: data[0].local.email})
         }.bind(this),
         error: function(xhr, status, err){
           console.log("broken url is " + url)
@@ -123,8 +123,39 @@ var App = React.createClass({
         this.loadCatsFromServer();
         this.loadJokesFromServer();
         this.loadmyCatsFromServer();
+        this.loadUserFromServer();
     },
     render: function() {
+      window.user = this.state.user;
+
+      var isUser = (
+                    <li className="dropdown">
+                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MINE<span className="caret"></span></a>
+                      <ul className="dropdown-menu" id="preMade">
+                      <MyCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.myCats} /> 
+                      </ul>
+                    </li>
+                    );
+            var noUser = (
+                    <li>
+                    <a href="/login" id="signIn" role="button" aria-haspopup="true" aria-expanded="false">SIGN IN</a>
+                    </li>
+                    );
+
+      var status = this.state.user === 'anon' ? noUser : isUser;
+
+      var stillInUser = (
+        <li className="dropdown">
+        <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
+          <ul className="dropdown-menu" id="makeYourOwn">
+            <NewBall data={this.state.allCats} />
+          </ul>
+        </li>
+
+        )
+      var status1 = this.state.user === 'anon' ? <div></div> : stillInUser;
+
+
         return (
         <div>
           <img src="/img/catlazereyes2.png" id="idx-img" alt="cat lazer eyes"/>
@@ -141,24 +172,14 @@ var App = React.createClass({
                 </div>                
                 <div className="collapse navbar-collapse" id="navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-right">
-                    <li className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MAKE YOUR OWN<span className="caret"></span></a>
-                        <ul className="dropdown-menu" id="makeYourOwn">
-                          <NewBall data={this.state.allCats} />
-                        </ul>
-                    </li>
+                    {status}
                     <li id="showCats" className="dropdown">
                       <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CATEGORIES<span className="caret"></span></a>
                         <ul className="dropdown-menu" id="preMade">
                           <AllCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.allCats} />
                         </ul>
                     </li>
-                    <li className="dropdown">
-                    <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">MINE<span className="caret"></span></a>
-                      <ul className="dropdown-menu" id="preMade">
-                        <MyCategories searchCats={this.searchCats} loadNewCats={this.loadNewCats} data={this.state.myCats} />
-                      </ul>
-                    </li>
+                    {status1}
                   </ul>
                 </div>
               </div>
@@ -207,11 +228,6 @@ var AllCategories = React.createClass({
 
 var MyCategories = React.createClass({
 
-
-  // if(user){
-
-  // }
-  // this.data.user
 
     render: function() {
         var self = this; 
