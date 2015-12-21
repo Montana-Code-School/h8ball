@@ -1,31 +1,3 @@
-#profileDiv.container-fluid{
- background-color: rgba(0, 0, 0, .85);
- height: 75%;
- width: 100%;
- margin-top: 0;
- color: white;
-}
-.heading{
- color:white;
-}
-.title{
- color: white;
-}
-.heading:hover{
- color:pink;
-}
-#profileDiv.container-fluid{
- background: rgba(0, 0, 0, .85);
- height: 75%;
- width: 100%;
- margin-top: 0;
- color: white;
-}
-.name{
- font-family: 'Yanone Kaffeesatz', sans-serif;
- font-size: 40px;
- color: white;
-}
 
 /* ***************** Start Creatures  */
 @font-face{
@@ -227,7 +199,7 @@ figure {
          text-align:left; 
          padding:30px 15px; 
         }
-        
+
 
     }
 

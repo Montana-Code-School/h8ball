@@ -44,6 +44,8 @@
  width: 100%;
  text-align: center;
  align: center;
+ font-size: 24px;
+ font-family: 'Yanone Kaffeesatz', sans-serif;"
 }
 #idx-img{
  width: 100%;
@@ -125,6 +127,30 @@ a {
 .bub h2{
  margin: 2px;
  padding: 1px;
+}
+
+/*************************** Landing Page ****************************/
+
+.heading{
+ color:white;
+}
+.title{
+ color: white;
+}
+.heading:hover{
+ color:pink;
+}
+#profileDiv.container-fluid{
+ background: rgba(0, 0, 0, .85);
+ height: 75%;
+ width: 100%;
+ margin-top: 0;
+ color: white;
+}
+.name{
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ font-size: 40px;
+ color: white;
 }
 
 /**************************Ball Size and Position and Words****************************/
@@ -265,6 +291,9 @@ overflow-y: auto;
   height: 50%;
   width: 100%;
  }
+ #section2{
+  font-size: 40px;
+ }
 }
 
 @media (max-width:1000px){
@@ -274,6 +303,9 @@ overflow-y: auto;
  .loginSky{
   height: 50%;
   width: 100%;
+ }
+ #section2{
+  font-size: 40px;
  }
 }
 
