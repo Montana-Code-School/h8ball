@@ -222,15 +222,6 @@ overflow-y: auto;
  padding: auto;
 }
 
-/*****************************ABOUT PAGE********************************/
-#profiles{
- margin-left: auto;
- margin-right: auto;
- width: 100%;
-}
-#background{
- background-color: #fefdfb   ;
-}
 /****************************About Dev's heading*****************************/
 .heading{
  color:white;
@@ -262,4 +253,22 @@ overflow-y: auto;
     background: $buttonBackground;
     color: transparentize( $buttonColor,0.8 );
   }
+}
+
+/* Mobile-first Responsive======================================= */
+
+@media (max-width:560px){
+ .hide-mobile{
+  display: none;
+ }
+}
+
+@media (max-width:820px){
+ .hide-mobile{
+   display: none;
+ }
+}
+
+@media screen and (min-width:1070px){
+
 }

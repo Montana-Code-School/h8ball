@@ -3,6 +3,7 @@
  <head>
   <meta charset="utf-8">	
   <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" type="text/css" href="landing.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="style/creatures.css">
@@ -61,7 +62,7 @@
   
 	<div class="container-fluid">
 	 <div class="container-fluid col-md-6">
-		<img id="landing8" src="img/8ball.png" alt="8 Ball" style="height: 100%; width: 100%">
+		<img id="landing8" class="hide-mobile" src="img/8ball.png" alt="8 Ball">
 	 </div>
 	<div id="heading" class="container-fluid text-center col-md-5">
    <h1 style="text-align: center; font-size: 60px; color: white; font-family: 'Yanone Kaffeesatz', sans-serif;">THE MAGIC 8 BALL ENGINE</h1>
@@ -87,7 +88,7 @@
  <br>
   <h1 class="name">ABOUT THE DEVELOPERS</h1>
    <div>
-    <ul class="creatures" id="creatures" style="font-family: 'Yanone Kaffeesatz', sans-serif;">
+    <ul class="creatures" id="creatures">
      <li class="face">
       <div class="click-anim">
         <figure style="background-color:#52303E">
@@ -125,7 +126,7 @@
       </div>
       <div class="shadow"></div>
        <a href="http://www.linkedin.com/in/bethdianethomas" class="heading"><h2>BETH THOMAS</h2></a>
-        <h3 class="title">"CSS Sparkle Czarina "</h3>
+        <h3 class="title">"CSS Sparkle Czarina"</h3>
      </li>
     </ul>
   </div>
@@ -134,7 +135,7 @@
  <br>
  <hr>
 
-  <!-- ********** 4th LANDING PAGE SECTION ********** -->
+  <!-- ********** SCRIPTS **************** -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/1.1.1/js/md5.js"></script>
 <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
@@ -144,7 +145,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
 <script src="/js/sparkle.js"></script>
 <script src="./static/home.js"></script>
-<script type="text/javascript"></script>
+<!-- <script type="text/javascript"></script> -->
 <script>
 (function ($) {
   $(document).ready(function(){

@@ -218,9 +218,14 @@ figure {
     
     
 /* Mobile-first Responsive======================================= */    
-    @media screen and (min-width:560px){
-        header section, section { width:550px; }
-        header section { font-size:1.2em; text-align:left; padding:30px 15px; }
+@media screen and (min-width:560px){
+        header section, section{
+         width:550px;
+        }
+        header section{ 
+         font-size:1.2em;
+         text-align:left; 
+         padding:30px 15px; }
     }
 
     @media screen and (min-width:820px){
