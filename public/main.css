@@ -45,7 +45,7 @@
  text-align: center;
  align: center;
  font-size: 24px;
- font-family: 'Yanone Kaffeesatz', sans-serif;
+ font-family: 'Yanone Kaffeesatz', sans-serif;"
 }
 #idx-img{
  width: 100%;
@@ -131,6 +131,9 @@ a {
 
 /*************************** Landing Page ****************************/
 
+.heading{
+ color:white;
+}
 .title{
  color: white;
 }
@@ -148,13 +151,6 @@ a {
  font-family: 'Yanone Kaffeesatz', sans-serif;
  font-size: 40px;
  color: white;
-}
-
-.magicTitle{
- text-align: center; 
- font-size: 60px; 
- color: white; 
- font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 /**************************Ball Size and Position and Words****************************/
@@ -252,6 +248,23 @@ overflow-y: auto;
  padding: auto;
 }
 
+/****************************About Dev's heading*****************************/
+.heading{
+ color:white;
+}
+.title{
+ color: white;
+}
+.heading:hover{
+ color:pink;
+}
+#profileDiv.container-fluid{
+ background: rgba(0, 0, 0, .85);
+ height: 75%;
+ width: 100%;
+ margin-top: 0;
+ color: white;
+}
 
 
 /********** SPARKLES ***********/
@@ -278,8 +291,11 @@ overflow-y: auto;
   height: 50%;
   width: 100%;
  }
-.title, .heading, #section2{
+ #section2{
   font-size: 32px;
+ }
+ #heading{
+  margin-right: 3%;
  }
 }
 
@@ -291,8 +307,11 @@ overflow-y: auto;
   height: 50%;
   width: 100%;
  }
- .title, .heading, #section2{
+ .title, .heading,#section2{
   font-size: 32px;
+ }
+  #heading{
+  margin-right: 3%;
  }
 }
 
