@@ -297,6 +297,9 @@ overflow-y: auto;
  #heading{
   margin-right: 3%;
  }
+ .creatureHeads{
+  margin-right: 5%;
+ }
 }
 
 @media (max-width:1000px){
@@ -312,6 +315,9 @@ overflow-y: auto;
  }
   #heading{
   margin-right: 3%;
+ }
+ .creatureHeads{
+  margin-right: 5%;
  }
 }
 
