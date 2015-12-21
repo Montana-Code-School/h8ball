@@ -93,3 +93,30 @@ $buttonColor: rgba(255,255,255,1);
   }
   
 }
+
+/* Mobile-first Responsive======================================= */
+
+@media (max-width:480px){
+ .loginSky{
+  height: 50%;
+  width: 100%;
+ }
+ .loginBox{
+  margin-top: 30%;
+ }
+}
+
+@media (max-width:1000px){
+ .loginSky{
+  height: 50%;
+  width: 100%;
+  vertical-align: center;
+ }
+ .loginBox{
+  margin-top: 30%;
+ }
+}
+
+@media screen and (min-width:1070px){
+
+}

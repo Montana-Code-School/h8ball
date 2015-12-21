@@ -261,11 +261,19 @@ overflow-y: auto;
  .hide-mobile{
   display: none;
  }
+ .loginSky{
+  height: 50%;
+  width: 100%;
+ }
 }
 
 @media (max-width:1000px){
  .hide-mobile{
    display: none;
+ }
+ .loginSky{
+  height: 50%;
+  width: 100%;
  }
 }
 
