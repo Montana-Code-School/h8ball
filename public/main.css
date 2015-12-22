@@ -376,7 +376,7 @@ overflow-y: auto;
  #words{
  position: absolute;
  top: 70%;
- right: 10%;
+ right: 3%;
  color: white;
  font-family: 'Yanone Kaffeesatz', sans-serif;
  }
@@ -426,7 +426,7 @@ overflow-y: auto;
  #words{
  position: absolute;
  top: 70%;
- right: 10%;
+ right: 3%;
  color: white;
  font-family: 'Yanone Kaffeesatz', sans-serif;
  }
