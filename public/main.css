@@ -47,14 +47,15 @@
  font-size: 24px;
  font-family: 'Yanone Kaffeesatz', sans-serif;"
 }
-#idx-img{
+/*#idx-img{
+ background-image: url('/img/catlazereyes2.png');
  width: 100%;
  height: 100%;
  background-size: cover;
  position: fixed;
  background-repeat: no-repeat;
  background-attachment: fixed;
-}
+}*/
 
 /**********************Nav Bar*************************/
 .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
@@ -281,7 +282,7 @@ overflow-y: auto;
   }
 }
 
-/* Mobile-first Responsive======================================= */
+/*********************** Media Queries for Landing Page *************************/
 
 @media (max-width:480px){
  .hide-mobile{
@@ -301,6 +302,8 @@ overflow-y: auto;
   margin-right: 5%;
  }
 }
+
+
 
 @media (max-width:1000px){
  .hide-mobile{
@@ -324,3 +327,37 @@ overflow-y: auto;
 @media screen and (min-width:1070px){
 
 }
+
+/*********************** Media Queries for 8ball Page *************************/
+
+@media (max-width:480px){
+ 
+ body[id=switcher] {
+  background-image: url(/img/nightSky.jpeg) !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  position: fixed !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+    }
+    img[id=idx-img]{
+     display: none !important;
+  }
+}
+
+@media (max-width:1000px){
+ body[id=switcher] {
+  background-image: url(/img/nightSky.jpeg) !important;
+  width: 100% !important;
+  height: 100% !important;
+  background-size: cover !important;
+  position: fixed !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed;
+    }
+    img[id=idx-img]{
+     display: none !important;
+  }
+}
+

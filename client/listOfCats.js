@@ -158,7 +158,6 @@ var App = React.createClass({
 
         return (
         <div>
-          <img src="/img/catlazereyes2.png" id="idx-img" alt="cat lazer eyes"/>
             <nav id="mainPageNav" className="navbar navbar-default navbar-fixed-top" role="navigation">
               <div className="container-fluid">
                 <div className="navbar-header">
