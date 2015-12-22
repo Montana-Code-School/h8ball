@@ -347,7 +347,7 @@ overflow-y: auto;
   img.resize{
     max-width: 150%;
     max-height: 150%;
-    margin-left: 100%;
+    margin-left: 50%;
     margin-top: 50%;
 
   }
@@ -364,7 +364,7 @@ overflow-y: auto;
  left: 5%;
  font-family: 'Yanone Kaffeesatz', sans-serif;
  width: 300px;
- height: 150px;
+ height: 100px;
  box-shadow: 2px 2px 4px 2px black;
  font-size: 2em;
  }
@@ -391,7 +391,7 @@ overflow-y: auto;
   img.resize{
     max-width: 150%;
     max-height: 150%;
-    margin-left: 100%;
+    margin-left: 50%;
     margin-top: 50%;
   }
   #whiteBub{ 
@@ -407,7 +407,7 @@ overflow-y: auto;
  left: 5%;
  font-family: 'Yanone Kaffeesatz', sans-serif;
  width: 300px;
- height: 150px;
+ height: 100px;
  box-shadow: 2px 2px 4px 2px black;
  font-size: 2em;
  }
