@@ -373,6 +373,13 @@ overflow-y: auto;
   margin: auto;
   margin: auto;
  }
+ #words{
+ position: absolute;
+ top: 70%;
+ right: 50%;
+ color: white;
+ font-family: 'Yanone Kaffeesatz', sans-serif;
+ }
 }
 
 @media (max-width:1000px){
@@ -415,6 +422,13 @@ overflow-y: auto;
  font-size: 2em;
  margin: auto;
  padding: auto;
+ }
+ #words{
+ position: absolute;
+ top: 70%;
+ right: 50%;
+ color: white;
+ font-family: 'Yanone Kaffeesatz', sans-serif;
  }
 }
 
